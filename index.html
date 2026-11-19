@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raising Multilingual Kids</title>
+<meta name="description" content="A research-based guide for parents raising bilingual children: what changes when your child starts school, how to choose a school setting, and how to keep your home language alive.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;display=swap" rel="stylesheet">
+<style>
+/* Layout idea: one reading column with wide "tool" panels breaking out; two colors stand for two languages (raspberry = home, teal = school) everywhere on the page. */
+:root {
+  --paper: #f3f8ff;
+  --card: #ffffff;
+  --ink: #22304a;
+  --muted: #586480;
+  --line: #d9e3f2;
+  --home: #d6336c;
+  --home-soft: #ffe3ee;
+  --school: #0b7f95;
+  --school-fill: #17a9c4;
+  --school-soft: #dcf5f9;
+  --sun: #ffc83d;
+  --leaf: #4cb05f;
+  --good: #2f8a45;
+  --warn: #c2410c;
+  --font-display: "EB Garamond", Garamond, "Times New Roman", serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --radius: 3px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #151b2b; --card: #1e2639; --ink: #eef2fb; --muted: #aab4cc; --line: #303b55;
+    --home: #ff7aa6; --home-soft: #3d1f2e; --school: #5fd3e8; --school-fill: #3cc3dc; --school-soft: #16323b;
+    --sun: #ffd25e; --leaf: #6fd17f; --good: #7cd492; --warn: #ff9f6e; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #151b2b; --card: #1e2639; --ink: #eef2fb; --muted: #aab4cc; --line: #303b55;
+    --home: #ff7aa6; --home-soft: #3d1f2e; --school: #5fd3e8; --school-fill: #3cc3dc; --school-soft: #16323b;
+    --sun: #ffd25e; --leaf: #6fd17f; --good: #7cd492; --warn: #ff9f6e; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 1.075rem; line-height: 1.6; }
+img, svg { max-width: 100%; }
+a { color: var(--home); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--school-fill); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.3rem, 5.2vw, 3.6rem); font-weight: 600; letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.5rem); font-weight: 600; }
+h3 { font-size: 1.35rem; font-weight: 600; }
+p { margin: 0; }
+.wrap { width: min(1080px, 100% - 32px); margin-inline: auto; }
+.read { max-width: 68ch; }
+.stack > * + * { margin-top: 1rem; }
+.home-word { color: var(--home); font-weight: 700; }
+.school-word { color: var(--school); font-weight: 700; }
+.cite { font-size: 0.82em; color: var(--muted); white-space: normal; }
+.cite a { color: inherit; }
+
+/* header */
+.site-header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 4px; background: linear-gradient(90deg, var(--home) 0 25%, var(--sun) 25% 50%, var(--school-fill) 50% 75%, var(--leaf) 75%); }
+.site-header { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.site-header .wrap { display: flex; align-items: center; gap: 16px; min-height: 60px; flex-wrap: wrap; }
+.brand { font-family: var(--font-display); font-weight: 600; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.brand svg { width: 28px; height: 28px; flex: none; }
+.nav { display: flex; gap: 4px 18px; flex-wrap: wrap; margin-left: auto; font-size: 0.95rem; }
+.nav a { color: var(--muted); text-decoration: none; padding: 6px 0; }
+.nav a:hover { color: var(--ink); }
+@media (max-width: 760px) { .nav { display: none; } }
+
+section { padding: 64px 0; border-bottom: 1px solid var(--line); }
+section:last-of-type { border-bottom: 0; }
+.kicker { font-family: var(--font-body); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; padding-top: 12px; border-top: 4px solid transparent; border-image: linear-gradient(90deg, var(--home) 0 25%, var(--sun) 25% 50%, var(--school-fill) 50% 75%, var(--leaf) 75%) 1; display: flex; gap: 12px; align-items: baseline; }
+.kicker .ch { font-family: var(--font-display); font-size: 1.6rem; letter-spacing: 0; color: var(--school); font-weight: 600; line-height: 1; }
+.lede { font-size: 1.2rem; color: var(--muted); }
+
+/* hero */
+.hero { padding: 56px 0 48px; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 820px); gap: 40px; align-items: center; }
+@media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } }
+.hero h1 .home-word, .hero h1 .school-word { font-weight: 600; font-style: italic; }
+.hero .lede { margin-top: 18px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+.btn { font: inherit; font-weight: 600; border-radius: 3px; padding: 11px 20px; border: 2px solid var(--ink); background: var(--ink); color: var(--paper); text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn:hover { transform: translateY(-1px); }
+.lines-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 18px 12px; }
+.lines-card figcaption { font-size: 0.88rem; color: var(--muted); margin-top: 8px; }
+.lines-card svg text { font-family: var(--font-body); fill: var(--muted); font-size: 12px; }
+.lines-card .lbl-home { fill: var(--home); font-weight: 700; }
+.lines-card .lbl-school { fill: var(--school); font-weight: 700; }
+.lines-card .axis { stroke: var(--line); }
+.lines-card .home { stroke: var(--home); }
+.lines-card .school { stroke: var(--school-fill); }
+.lines-card .marker { stroke: var(--muted); stroke-dasharray: 3 4; }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.85rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { display: inline-block; width: 22px; height: 0; border-top: 4px solid; border-radius: 2px; }
+
+/* concept cards */
+.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
+@media (max-width: 860px) { .grid-3 { grid-template-columns: 1fr; } }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; display: flex; flex-direction: column; gap: 10px; }
+.card .term { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--home); }
+.card p { color: var(--ink); }
+.card .plain { color: var(--muted); font-size: 0.97rem; }
+.spectrum { margin-top: 6px; }
+.spectrum-bar { height: 10px; border-radius: 999px; background: linear-gradient(90deg, var(--home), var(--home-soft)); }
+.spectrum-ends { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--muted); margin-top: 4px; gap: 8px; }
+.age-track { display: grid; grid-template-columns: 1fr 1fr; border-radius: 10px; overflow: hidden; font-size: 0.82rem; font-weight: 700; text-align: center; margin-top: 4px; }
+.age-track div { padding: 8px 4px; }
+.age-track .a { background: var(--home-soft); color: var(--home); }
+.age-track .b { background: var(--school-soft); color: var(--school); }
+
+/* tool panels */
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: 3px; padding: clamp(18px, 3vw, 30px); margin-top: 28px; }
+.panel-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+.panel-head p { color: var(--muted); font-size: 0.95rem; max-width: 60ch; }
+.map-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 28px; }
+@media (max-width: 860px) { .map-grid { grid-template-columns: 1fr; } }
+.domain-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.domain { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 3px; background: var(--paper); transition: background-color .25s ease, border-color .25s ease; }
+.domain.changed { border-color: var(--school-fill); }
+.domain-name { font-weight: 700; }
+.domain-name small { display: block; font-weight: 400; color: var(--muted); font-size: 0.85rem; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 3px; overflow: hidden; background: var(--card); }
+.seg button { font: inherit; font-size: 0.85rem; font-weight: 700; padding: 6px 12px; border: 0; background: transparent; color: var(--muted); cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"][data-v="home"] { background: var(--home); color: #fff; }
+.seg button[aria-pressed="true"][data-v="both"] { background: linear-gradient(90deg, var(--home) 50%, var(--school-fill) 50%); color: #fff; text-shadow: 0 0 3px rgba(0,0,0,.5); }
+.seg button[aria-pressed="true"][data-v="school"] { background: var(--school-fill); color: #fff; }
+@media (max-width: 480px) { .domain { grid-template-columns: 1fr; } .seg button { padding: 6px 10px; } }
+.summary { position: sticky; top: 80px; align-self: start; display: grid; gap: 16px; }
+.big { font-family: var(--font-display); font-size: 3rem; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; color: var(--home); }
+.big small { font-size: 1rem; color: var(--muted); font-weight: 500; }
+.share-bar { display: flex; height: 16px; border-radius: 999px; overflow: hidden; background: var(--line); }
+.share-bar div { transition: width .4s ease; }
+.share-bar .h { background: var(--home); }
+.share-bar .b { background: repeating-linear-gradient(45deg, var(--home) 0 6px, var(--school-fill) 6px 12px); }
+.share-bar .s { background: var(--school-fill); }
+.verdict { border-left: 4px solid var(--home); padding: 10px 14px; background: var(--home-soft); border-radius: 0 10px 10px 0; font-size: 0.97rem; }
+.verdict.warn { border-color: var(--warn); background: color-mix(in srgb, var(--warn) 12%, var(--card)); }
+.verdict.good { border-color: var(--good); background: color-mix(in srgb, var(--good) 12%, var(--card)); }
+.tool-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn.sm { padding: 8px 14px; font-size: 0.9rem; }
+.example-note { font-size: 0.85rem; color: var(--muted); }
+
+/* slide steps */
+.slide { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; counter-reset: s; }
+@media (max-width: 860px) { .slide { grid-template-columns: 1fr; gap: 12px; } }
+.slide li { counter-increment: s; padding: 20px; background: var(--card); border: 1px solid var(--line); position: relative; display: flex; flex-direction: column; gap: 10px; }
+.slide li:first-child { border-radius: var(--radius) 0 0 var(--radius); }
+.slide li:last-child { border-radius: 0 var(--radius) var(--radius) 0; }
+@media (max-width: 860px) { .slide li, .slide li:first-child, .slide li:last-child { border-radius: var(--radius); } }
+.slide li::before { content: "Step " counter(s); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.slide .fade { height: 8px; border-radius: 999px; background: var(--home); }
+.slide li:nth-child(2) .fade { opacity: .75; }
+.slide li:nth-child(3) .fade { opacity: .45; }
+.slide li:nth-child(4) .fade { opacity: .18; }
+.slide .stepin { margin-top: auto; padding-top: 10px; border-top: 1px dashed var(--line); font-size: 0.93rem; }
+.slide .stepin b { color: var(--good); }
+
+/* school options */
+.filter { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.filter label { font-weight: 700; }
+.chips { display: inline-flex; gap: 8px; flex-wrap: wrap; }
+.chip { font: inherit; font-size: 0.92rem; padding: 7px 14px; border-radius: 3px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
+@media (max-width: 960px) { .options { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .options { grid-template-columns: 1fr; } }
+.opt { border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; background: var(--paper); display: flex; flex-direction: column; gap: 10px; transition: opacity .25s ease, border-color .25s ease; }
+.opt.dim { opacity: .45; }
+.opt.match { border-color: var(--home); box-shadow: 0 0 0 1px var(--home); }
+.opt .tag { font-size: 0.78rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.opt p { font-size: 0.95rem; }
+.load { display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; align-items: center; font-size: 0.85rem; margin-top: auto; padding-top: 10px; border-top: 1px solid var(--line); }
+.meter { display: flex; gap: 4px; }
+.meter i { width: 100%; height: 8px; border-radius: 3px; background: var(--line); }
+.meter.l1 i:nth-child(-n+1), .meter.l2 i:nth-child(-n+2), .meter.l3 i:nth-child(-n+3) { background: var(--home); }
+.meter.s1 i:nth-child(-n+1), .meter.s2 i:nth-child(-n+2), .meter.s3 i:nth-child(-n+3) { background: var(--school-fill); }
+.callout { margin-top: 24px; display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; padding: 18px; border-radius: var(--radius); background: color-mix(in srgb, var(--sun) 22%, var(--card)); }
+.callout .mark { font-family: var(--font-display); font-weight: 600; font-size: 1.6rem; color: var(--school); line-height: 1; }
+
+/* habits */
+.habits { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
+@media (max-width: 760px) { .habits { grid-template-columns: 1fr; } }
+.habit { display: grid; grid-template-columns: 44px 1fr; gap: 14px; padding: 20px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
+.habit .n { width: 44px; height: 44px; border-radius: 50%; background: var(--home-soft); color: var(--home); display: grid; place-items: center; font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; }
+.habit p { font-size: 0.97rem; }
+.habit:nth-child(4n+2) .n { background: color-mix(in srgb, var(--sun) 30%, var(--card)); color: var(--warn); }
+.habit:nth-child(4n+3) .n { background: var(--school-soft); color: var(--school); }
+.habit:nth-child(4n+4) .n { background: color-mix(in srgb, var(--leaf) 20%, var(--card)); color: var(--good); }
+.habit .try { margin-top: 8px; color: var(--muted); font-size: 0.93rem; }
+
+/* script */
+.script { margin-top: 26px; display: grid; gap: 10px; max-width: 760px; }
+.bubble { padding: 14px 18px; border-radius: 18px; max-width: 85%; font-size: 1rem; }
+.bubble .who { display: block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; opacity: .8; }
+.bubble.them { background: var(--card); border: 1px solid var(--line); border-bottom-left-radius: 4px; }
+.bubble.you { background: var(--home); color: #fff; margin-left: auto; border-bottom-right-radius: 4px; }
+:root[data-theme="dark"] .bubble.you { color: #2a0f1b; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .bubble.you { color: #2a0f1b; } }
+
+/* quiz */
+.quiz { display: grid; gap: 14px; margin-top: 26px; }
+.q { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; }
+.q-top { display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center; }
+@media (max-width: 560px) { .q-top { grid-template-columns: 1fr; } }
+.q-text { font-weight: 700; }
+.q-btns { display: flex; gap: 8px; }
+.q-btns button { font: inherit; font-weight: 700; font-size: 0.9rem; padding: 8px 16px; border-radius: 3px; border: 2px solid var(--line); background: var(--paper); color: var(--ink); cursor: pointer; }
+.q-btns button:disabled { cursor: default; }
+.q-btns button.right { border-color: var(--good); background: color-mix(in srgb, var(--good) 15%, var(--card)); }
+.q-btns button.wrong { border-color: var(--warn); background: color-mix(in srgb, var(--warn) 15%, var(--card)); }
+.q-explain { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line); font-size: 0.97rem; color: var(--muted); }
+.q-explain b { color: var(--ink); }
+.score { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-top: 4px; font-weight: 700; }
+.score output { font-family: var(--font-display); font-size: 1.4rem; font-variant-numeric: tabular-nums; }
+
+.memo { margin-top: 26px; max-width: 760px; background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--school); padding: 22px 26px; }
+.memo-head { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; margin-bottom: 10px; }
+.memo ol { margin: 0; padding-left: 1.3rem; display: grid; gap: 10px; }
+/* closing + sources */
+.ref-table { margin-top: 22px; overflow-x: auto; }
+.ref-table table { width: 100%; border-collapse: collapse; font-size: 0.95rem; min-width: 620px; }
+.ref-table th { text-align: left; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-bottom: 2px solid var(--ink); padding: 8px 12px 8px 0; }
+.ref-table td { border-bottom: 1px solid var(--line); padding: 12px 12px 12px 0; vertical-align: top; }
+.ref-table td:last-child { color: var(--muted); width: 32%; }
+.src { font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 3px; white-space: nowrap; }
+.closing { background: var(--ink); color: var(--paper); }
+.closing h2 { color: var(--paper); }
+.closing .lede { color: color-mix(in srgb, var(--paper) 75%, var(--ink)); }
+.closing .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 26px; }
+@media (max-width: 760px) { .closing .three { grid-template-columns: 1fr; } }
+.closing .three div { border-top: 3px solid var(--sun); padding-top: 12px; }
+.closing .three b { font-family: var(--font-display); font-size: 1.15rem; display: block; margin-bottom: 4px; }
+.refs { display: grid; gap: 10px; margin-top: 22px; }
+.refs details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; }
+.refs summary { cursor: pointer; font-size: 0.97rem; }
+.refs summary .src { font-size: 0.8rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; margin-right: 8px; white-space: nowrap; }
+.src.course { background: var(--home-soft); color: var(--home); }
+.src.outside { background: var(--school-soft); color: var(--school); }
+.refs details p { margin-top: 8px; font-size: 0.93rem; color: var(--muted); }
+.refs h3 { margin-top: 26px; }
+footer { padding: 28px 0 40px; font-size: 0.9rem; color: var(--muted); }
+
+
+/* parts */
+.part { padding: 56px 0; border-bottom: 0; }
+.part.p-home { background: var(--home-soft); }
+.part.p-sun { background: color-mix(in srgb, var(--sun) 24%, var(--card)); }
+.part.p-school { background: var(--school-soft); }
+.part-inner { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
+@media (max-width: 640px) { .part-inner { grid-template-columns: 1fr; gap: 8px; } }
+.part-num { font-family: var(--font-display); font-weight: 600; font-size: clamp(2.6rem, 6vw, 4rem); line-height: 1; color: var(--ink); white-space: nowrap; }
+.part.p-home .part-num { color: var(--home); }
+.part.p-school .part-num { color: var(--school); }
+.part h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
+.part-desc { margin-top: 8px; font-size: 1.15rem; color: var(--muted); max-width: 60ch; }
+/* examples */
+.examples { margin-top: 32px; }
+.ex-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 14px; }
+@media (max-width: 860px) { .ex-grid { grid-template-columns: 1fr; } }
+.ex { padding: 16px 18px; border-top: 4px solid var(--sun); background: var(--card); border-radius: var(--radius); display: grid; gap: 8px; }
+.ex:nth-child(2) { border-top-color: var(--school-fill); }
+.ex:nth-child(3) { border-top-color: var(--leaf); }
+.ex .term { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--home); }
+/* family quiz */
+.fq-grid { display: grid; gap: 16px; }
+.fq-panel { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 28px; }
+@media (max-width: 860px) { .fq-panel { grid-template-columns: 1fr; } }
+.fq { border: 0; padding: 0; margin: 0; display: grid; gap: 6px; }
+.fq legend { font-weight: 700; margin-bottom: 6px; padding: 0; }
+.fq-opt { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; padding: 9px 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); cursor: pointer; font-size: 0.97rem; }
+.fq-opt:has(input:checked) { border-color: var(--home); background: var(--home-soft); }
+.fq-opt input { margin-top: 5px; accent-color: var(--home); }
+.fq-result { position: sticky; top: 90px; align-self: start; display: grid; gap: 12px; padding: 20px; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); }
+.fq-progress { font-size: 0.85rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.fq-type h3 { font-size: 1.5rem; color: var(--home); margin-bottom: 6px; }
+.is-editing .fq-type { border-top: 1px dashed var(--line); padding-top: 10px; }
+.fq-tag { grid-column: 2; font-size: 0.78rem; color: var(--muted); }
+.fq-tools { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+.is-editing .fq { padding: 12px; border: 1px dashed var(--line); border-radius: var(--radius); }
+.fq-grid > .btn { justify-self: start; }
+
+
+/* transition point */
+.tp { margin-top: 28px; }
+.tp-lede { color: var(--muted); max-width: 68ch; margin-top: 6px; }
+.tp-steps { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 860px) { .tp-steps { grid-template-columns: 1fr; } }
+.tp-steps li { border-top: 4px solid var(--school-fill); padding-top: 12px; display: grid; gap: 6px; align-content: start; }
+.tp-steps li:nth-child(2) { border-top-color: var(--sun); }
+.tp-steps li:nth-child(3) { border-top-color: var(--home); }
+.tp-steps li:nth-child(4) { border-top-color: var(--leaf); }
+.tp-when { font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; }
+.tp-steps p { font-size: 0.97rem; }
+
+
+/* new parts and sections */
+.part.p-leaf { background: color-mix(in srgb, var(--leaf) 18%, var(--card)); }
+.part.p-leaf .part-num { color: var(--good); }
+.sign-panel { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 28px; }
+@media (max-width: 860px) { .sign-panel { grid-template-columns: 1fr; } }
+.signs { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.sign { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); cursor: pointer; }
+.sign:has(input:checked) { border-color: var(--home); background: var(--home-soft); }
+.sign input { margin-top: 5px; accent-color: var(--home); width: 18px; height: 18px; }
+.sign-result { position: sticky; top: 90px; align-self: start; display: grid; gap: 12px; padding: 20px; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); }
+.sign-msg h3 { font-size: 1.4rem; color: var(--home); margin-bottom: 6px; }
+.is-editing .sign-msg { border-top: 1px dashed var(--line); padding-top: 10px; }
+.myths { margin-top: 26px; }
+.myth-grid { display: grid; gap: 12px; margin-top: 14px; }
+.myth-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--card); }
+@media (max-width: 720px) { .myth-row { grid-template-columns: 1fr; } }
+.myth, .truth { padding: 14px 16px; display: grid; gap: 6px; align-content: start; }
+.myth { background: color-mix(in srgb, var(--warn) 9%, var(--card)); }
+.myth p { font-weight: 700; }
+.myth-tag, .truth-tag { font-size: 0.75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.myth-tag { color: var(--warn); }
+.truth-tag { color: var(--good); }
+.quiz-h { margin-top: 30px; }
+.bs-grid, .dc-grid, .au-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+@media (max-width: 760px) { .bs-grid, .dc-grid, .au-grid { grid-template-columns: 1fr; } }
+.bs-card, .dc-card, .au-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; display: grid; gap: 10px; align-content: start; }
+.bs-card { border-top: 4px solid var(--leaf); }
+.dc-card { border-top: 4px solid var(--school-fill); }
+.au-card { border-top: 4px solid var(--home); }
+.dc-card .tag { font-size: 0.78rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.why { font-size: 0.95rem; padding: 10px 12px; border-radius: var(--radius); background: var(--paper); }
+.dc-link { font-size: 0.92rem; font-weight: 600; }
+#dc .example-note { margin-top: 18px; }
+.src.local { background: color-mix(in srgb, var(--leaf) 20%, var(--card)); color: var(--good); }
+
+/* editor */
+.ed-fab { position: fixed; right: 20px; bottom: 20px; z-index: 40; font: inherit; font-weight: 700; padding: 12px 20px; border-radius: 999px; border: 0; background: var(--ink); color: var(--paper); box-shadow: 0 6px 20px rgba(0,0,0,.2); cursor: pointer; }
+.ed-fab:hover { transform: translateY(-1px); }
+.is-editing { padding-right: 340px; }
+@media (max-width: 900px) { .is-editing { padding-right: 0; padding-bottom: 60vh; } }
+.is-editing .editable { outline: 1px dashed color-mix(in srgb, var(--school-fill) 60%, transparent); outline-offset: 3px; border-radius: 2px; cursor: text; }
+.is-editing .editable:hover { outline-style: solid; }
+.is-editing .editable:focus { outline: 2px solid var(--school-fill); background: color-mix(in srgb, var(--school-fill) 8%, transparent); }
+.ed-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 320px; z-index: 50; background: var(--card); border-left: 1px solid var(--line); box-shadow: -8px 0 30px rgba(0,0,0,.08); padding: 20px; overflow-y: auto; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 0.92rem; display: flex; flex-direction: column; gap: 10px; color: var(--ink); }
+@media (max-width: 900px) { .ed-panel { top: auto; left: 0; width: auto; height: 55vh; border-left: 0; border-top: 1px solid var(--line); } }
+.ed-panel h2 { font-family: inherit; font-size: 1.15rem; font-weight: 700; }
+.ed-panel h3 { font-family: inherit; font-size: 0.8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: 10px; }
+.ed-help { color: var(--muted); font-size: 0.85rem; }
+.ed-status { font-weight: 700; padding: 8px 10px; border-radius: 6px; background: var(--paper); }
+.ed-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.ed-row input[type=color] { width: 44px; height: 30px; border: 1px solid var(--line); border-radius: 6px; padding: 2px; background: var(--card); cursor: pointer; }
+.ed-panel select, .q-btns select { font: inherit; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); color: var(--ink); }
+.ed-sections { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.ed-sections li { display: grid; grid-template-columns: auto 1fr auto auto; gap: 6px; align-items: center; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; }
+.ed-sections label { font-size: 0.85rem; line-height: 1.3; }
+.ed-mini { font: inherit; font-size: 0.8rem; padding: 4px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--paper); color: var(--ink); cursor: pointer; }
+.ed-mini:disabled { opacity: .4; cursor: default; }
+.ed-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); position: sticky; bottom: -20px; background: var(--card); padding-bottom: 8px; }
+.domain-name .dname { display: inline-block; }
+.domain-name small { display: block; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Raising Multilingual Kids, back to top">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="6" y="8" width="20" height="20" rx="6" fill="#d6336c"></rect><path d="M11 8V6a5 5 0 0 1 10 0v2" fill="none" stroke="#d6336c" stroke-width="2.6"></path><rect x="16" y="14" width="10" height="10" rx="3" fill="#17a9c4"></rect></svg>
+      Raising Multilingual Kids
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#part1" data-e="nav1">Basic Terms</a>
+      <a href="#family" data-e="nav2">Family Quiz</a>
+      <a href="#part2" data-e="nav3">Slipping Away</a>
+      <a href="#quiz" data-e="nav4">Myths</a>
+      <a href="#part3" data-e="nav5">Going to School</a>
+      <a href="#schools" data-e="nav8">School Options</a>
+      <a href="#home" data-e="nav6">At Home</a>
+      <a href="#signs" data-e="nav9">Your Household</a>
+      <a href="#dc" data-e="nav10">D.C. Options</a>
+      <a href="#author" data-e="nav11">About the Author</a>
+      <a href="#sources" data-e="nav7">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p data-e="e1" class="kicker">A guide for parents of bilingual kids</p>
+      <h1 data-e="e2">You raised them in <span class="home-word">your language</span>. Now they're starting <span class="school-word">school</span>.</h1>
+      <p data-e="e3" class="lede">For a lot of families, the first years of school are when the home language starts to slip. This guide covers what the research says happens at that point, how to think about school options, and the small habits that help children keep both languages.</p>
+      <div class="hero-actions">
+        <a data-e="e140" class="btn" href="#map">Map your child's languages</a>
+        <a data-e="e141" class="btn ghost" href="#family">Take the family quiz</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="part p-home" id="part1">
+  <div class="wrap part-inner">
+    <p class="part-num" data-e="part1-n">Part One</p>
+    <div>
+      <h2 data-e="part1-t">Basic linguistic terms</h2>
+      <p class="part-desc" data-e="part1-d">The ideas researchers use to describe bilingual families, and how they probably already show up in your home.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BASICS -->
+<section id="basics">
+  <div class="wrap">
+    <div class="read stack">
+      <p class="kicker"><span class="ch">I</span><span class="chn">Chapter 1</span><span aria-hidden="true">·</span><span data-e="e116" class="ktext">Before school</span></p>
+      <h2 data-e="e6">The basics, in plain language</h2>
+      <p data-e="e7" class="lede">Researchers have names for things many bilingual families already do. Knowing them makes the advice later on easier to use.</p>
+    </div>
+    <div class="grid-3">
+      <article class="card">
+        <span data-e="e117" class="term">Family language policy</span>
+        <h3 data-e="e8">Your family's plan for its languages</h3>
+        <p data-e="e9">A family language policy is the deliberate choices a family makes about which languages get used at home, by whom, and for reading and writing. <span class="cite">(King, Fogle &amp; Logan-Terry, 2008)</span></p>
+        <p data-e="e10" class="plain">Some families plan this carefully, like "Mom speaks only Spanish." Others keep it loose and flexible. Both count, and most families sit somewhere in between.</p>
+      </article>
+      <article class="card">
+        <span data-e="e118" class="term">BFLA → SLA</span>
+        <h3 data-e="e11">When a second language starts matters</h3>
+        <p data-e="e12">A child who hears two languages from birth is doing <b>bilingual first language acquisition</b> (BFLA). A child who starts a new language later, at school for example, is doing <b>second language acquisition</b> (SLA). <span class="cite">(Ortega, 2013, p. 4)</span></p>
+        <p data-e="e13" class="plain">The line between them blurs around ages 3 to 4, which is when many kids start preschool. That's why the start of school is such a big moment.</p>
+      </article>
+      <article class="card">
+        <span data-e="e119" class="term">Complementarity Principle</span>
+        <h3 data-e="e14">Each language has its own jobs</h3>
+        <p data-e="e15">Bilinguals usually use their languages for different purposes, in different parts of life, with different people. Very few use every language for everything. <span class="cite">(Grosjean, 2010)</span></p>
+        <p data-e="e16" class="plain">One boy in De Houwer's study knew the word "boots" only in English. That isn't a problem. It just shows where each language gets used. <span class="cite">(De Houwer, 2009, p. 60)</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="part p-leaf" id="partw">
+  <div class="wrap part-inner">
+    <p class="part-num" data-e="partw-n">Part Two</p>
+    <div>
+      <h2 data-e="partw-t">Where is your family now?</h2>
+      <p class="part-desc" data-e="partw-d">Before looking ahead to school, take stock of how your family uses its languages today.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAMILY QUIZ -->
+<section id="family">
+  <div class="wrap">
+    <div class="read stack">
+      <p class="kicker"><span class="ch">II</span><span class="chn">Chapter 2</span><span aria-hidden="true">·</span><span data-e="fk" class="ktext">Your family today</span></p>
+      <h2 data-e="fh">What's your family's language plan right now?</h2>
+      <p class="lede" data-e="fl">Family language policies range from carefully planned to completely spontaneous. Answer five quick questions to see where your family sits today. There are no wrong answers, and nothing is saved.</p>
+    </div>
+    <div class="panel fq-panel">
+      <form id="familyQuiz" class="fq-grid">
+      <fieldset class="fq">
+        <legend data-e="fq0q">1. When did your family decide which languages to use at home?</legend>
+          <label class="fq-opt"><input type="radio" name="fq0" value="planned" id="fq0-planned"><span data-e="fq0p">We talked about it and set some rules.</span></label>
+          <label class="fq-opt"><input type="radio" name="fq0" value="flexible" id="fq0-flexible"><span data-e="fq0f">We never really decided. It just happens naturally.</span></label>
+          <label class="fq-opt"><input type="radio" name="fq0" value="drift" id="fq0-drift"><span data-e="fq0d">We meant to use our language, but it's mostly English now.</span></label>
+      </fieldset>
+      <fieldset class="fq">
+        <legend data-e="fq1q">2. What language does your child usually answer you in?</legend>
+          <label class="fq-opt"><input type="radio" name="fq1" value="planned" id="fq1-planned"><span data-e="fq1p">Our home language, almost always.</span></label>
+          <label class="fq-opt"><input type="radio" name="fq1" value="flexible" id="fq1-flexible"><span data-e="fq1f">A mix of both, depending on the moment.</span></label>
+          <label class="fq-opt"><input type="radio" name="fq1" value="drift" id="fq1-drift"><span data-e="fq1d">Mostly English, even when I speak our language.</span></label>
+      </fieldset>
+      <fieldset class="fq">
+        <legend data-e="fq2q">3. Who speaks the home language with your child?</legend>
+          <label class="fq-opt"><input type="radio" name="fq2" value="planned" id="fq2-planned"><span data-e="fq2p">A set person or set times, like one parent or dinner.</span></label>
+          <label class="fq-opt"><input type="radio" name="fq2" value="flexible" id="fq2-flexible"><span data-e="fq2f">Whoever is around, whenever it comes up.</span></label>
+          <label class="fq-opt"><input type="radio" name="fq2" value="drift" id="fq2-drift"><span data-e="fq2d">Mostly grandparents or relatives, not us day to day.</span></label>
+      </fieldset>
+      <fieldset class="fq">
+        <legend data-e="fq3q">4. How does reading and writing happen at home?</legend>
+          <label class="fq-opt"><input type="radio" name="fq3" value="planned" id="fq3-planned"><span data-e="fq3p">We read or write in the home language regularly.</span></label>
+          <label class="fq-opt"><input type="radio" name="fq3" value="flexible" id="fq3-flexible"><span data-e="fq3f">We have some books in each language.</span></label>
+          <label class="fq-opt"><input type="radio" name="fq3" value="drift" id="fq3-drift"><span data-e="fq3d">Reading is mostly in English.</span></label>
+      </fieldset>
+      <fieldset class="fq">
+        <legend data-e="fq4q">5. When your child mixes languages, what do you usually do?</legend>
+          <label class="fq-opt"><input type="radio" name="fq4" value="planned" id="fq4-planned"><span data-e="fq4p">Gently encourage them to say it in the home language.</span></label>
+          <label class="fq-opt"><input type="radio" name="fq4" value="flexible" id="fq4-flexible"><span data-e="fq4f">Go with it. Mixing is fine with us.</span></label>
+          <label class="fq-opt"><input type="radio" name="fq4" value="drift" id="fq4-drift"><span data-e="fq4d">Switch to English so the conversation keeps going.</span></label>
+      </fieldset>
+      </form>
+      <div class="fq-result" id="fqResult" aria-live="polite">
+        <p class="fq-progress" id="fqProgress">0 of 5 answered</p>
+        <div class="fq-type" data-type="none"><h3 data-e="fr0t">Your result appears here</h3><p data-e="fr0d">Answer all five questions to see which kind of plan your family has right now.</p></div>
+        <div class="fq-type" data-type="planned" hidden=""><h3 data-e="fr1t">The Planner</h3><p data-e="fr1d">Your family already has a deliberate language policy, with set people, times or rules. That's a strong base. The main risk comes when school starts and the school language pushes into the times you set aside. Part Two shows what to watch for.</p></div>
+        <div class="fq-type" data-type="flexible" hidden=""><h3 data-e="fr2t">Go with the Flow</h3><p data-e="fr2d">Your family uses both languages naturally, without many rules. Many families live this way, and it works while both languages are needed. Once school starts, the school language usually takes over the open moments, so it helps to set aside a few times when the home language is the default.</p></div>
+        <div class="fq-type" data-type="drift" hidden=""><h3 data-e="fr3t">Drifting toward the school language</h3><p data-e="fr3d">The school language is already doing most of the work at home. That's the most common pattern, not a failure, and it can still be turned around. Start with Part Two to see how it happens, then the habits in Part Three.</p></div>
+        <button type="button" class="btn sm ghost" id="fqReset">Start over</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="part p-sun" id="part2">
+  <div class="wrap part-inner">
+    <p class="part-num" data-e="part2-n">Part Three</p>
+    <div>
+      <h2 data-e="part2-t">How does a language slip away?</h2>
+      <p class="part-desc" data-e="part2-d">What usually happens to the home language once school starts, and the myths that make it worse.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LANGUAGE MAP -->
+<section id="map">
+  <div class="wrap">
+    <div class="read stack">
+      <p class="kicker"><span class="ch">II</span><span class="chn">Chapter 2</span><span aria-hidden="true">·</span><span data-e="e120" class="ktext">Your child's week</span></p>
+      <h2 data-e="e18">Map where your child's languages live</h2>
+      <p data-e="e19" class="lede">Because languages divide up the parts of life, the home language survives in the places where it's still needed. Mark which language your child uses in each part of their week. The example below is a family that speaks Korean at home and English at school.</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <p data-e="e20">Tap <b>Home</b>, <b>Both</b>, or <b>School</b> for each row. Nothing you enter is saved or sent anywhere.</p>
+        <div class="tool-actions">
+          <button class="btn sm" id="driftBtn" type="button">Show what often changes after school starts</button>
+          <button class="btn sm ghost" id="resetBtn" type="button">Reset to example</button>
+        </div>
+      </div>
+      <div class="map-grid">
+        <ul class="domain-list" id="domains"></ul>
+        <aside class="summary" aria-live="polite">
+          <div>
+            <div class="big"><span id="homeCount">0</span><small> of <span id="totalCount">0</span> parts of life use the home language</small></div>
+          </div>
+          <div class="share-bar" aria-hidden="true"><div class="h" id="barH"></div><div class="b" id="barB"></div><div class="s" id="barS"></div></div>
+          <div class="legend">
+            <span><i style="border-color:var(--home)"></i>Home only</span>
+            <span><i style="border-color:var(--school-fill)"></i>School only</span>
+          </div>
+          <p class="verdict" id="verdict"></p>
+          <p data-e="e22" class="example-note" id="driftNote" hidden="">Rows outlined in teal changed. This drift is the pattern described in "The first year" below.</p>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSITION -->
+<section id="transition">
+  <div class="wrap">
+    <div class="read stack">
+      <p class="kicker"><span class="ch">III</span><span class="chn">Chapter 3</span><span aria-hidden="true">·</span><span data-e="e121" class="ktext">The first year</span></p>
+      <h2 data-e="e24">How a home language slips away</h2>
+      <p data-e="e25" class="lede">Researchers keep finding the same pattern in families. It usually happens gradually, and most of the time nobody chooses it. <span class="cite">(De Houwer, 2009, p. 63; Wong Fillmore, 1991)</span></p>
+    </div>
+    <ol class="slide">
+      <li>
+        <div class="fade" aria-hidden="true"></div>
+        <h3 data-e="e26">School news comes home in the school language</h3>
+        <p data-e="e27">Your child has learned about the day in English, so they tell you about it in English.</p>
+        <p data-e="e28" class="stepin"><b>Step in:</b> Ask follow-up questions in your language. Act interested in the story, and don't correct them.</p>
+      </li>
+      <li>
+        <div class="fade" aria-hidden="true"></div>
+        <h3 data-e="e29">Parents stop switching back</h3>
+        <p data-e="e30">Answering in English is easier and keeps the conversation going, so you start doing it more often.</p>
+        <p data-e="e31" class="stepin"><b>Step in:</b> Choose a few times of day, like dinner or bedtime, when the home language is the default.</p>
+      </li>
+      <li>
+        <div class="fade" aria-hidden="true"></div>
+        <h3 data-e="e32">Each person speaks a different language</h3>
+        <p data-e="e33">You speak your language, your child answers in English, and that becomes the family habit.</p>
+        <p data-e="e34" class="stepin"><b>Step in:</b> Create real reasons to speak it, like video calls with grandparents or friends who need the language.</p>
+      </li>
+      <li>
+        <div class="fade" aria-hidden="true"></div>
+        <h3 data-e="e35">Your child understands but can't speak it</h3>
+        <p data-e="e36">Children can lose the ability to speak the home language. In Wong Fillmore's study, families lost the language they used to talk to each other.</p>
+        <p data-e="e37" class="stepin"><b>Step in:</b> This can still be turned around. Passive understanding is a real foundation to build on.</p>
+      </li>
+    </ol>
+    <div class="callout">
+      <span class="mark" aria-hidden="true">!</span>
+      <p data-e="e38"><b>Why it isn't your fault.</b> For many families, raising a child bilingually was never really a free choice. It's simply what life looks like. <span class="cite">(De Houwer, 2009, p. 68)</span> Parents often get advice with no basis in research and little support, and the guilt and stress that follow are common. <span class="cite">(Lanza, 2007, cited in De Houwer, 2009, p. 71)</span> This guide is here to fill that gap.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MYTHS -->
+<section id="quiz">
+  <div class="wrap">
+    <div class="read stack">
+      <p class="kicker"><span class="ch">VII</span><span class="chn">Chapter 7</span><span aria-hidden="true">·</span><span data-e="e131" class="ktext">Myths and misconceptions</span></p>
+      <h2 data-e="e84">Myths and misconceptions</h2>
+      <p data-e="e85" class="lede">Many families give up a home language because of advice that sounds reasonable but doesn't hold up. Decide whether each statement is true or false, then see what the research from our course readings says.</p>
+    </div>
+    <div class="myths">
+      <h3 data-e="my0">Common myths vs. what research says</h3>
+      <div class="myth-grid">
+        <div class="myth-row"><div class="myth"><span class="myth-tag">Myth</span><p data-e="my1m">"One parent, one language" is the only method that works.</p></div><div class="truth"><span class="truth-tag">What research says</span><p data-e="my1t">No single family strategy, including One-Parent-One-Language, reliably produces a child who actively speaks both languages. How much a child hears each language, and whether they need it, matter more. <span class="cite">(Fogle &amp; King, 2013; De Houwer, 2009, p. 70)</span></p></div></div>
+        <div class="myth-row"><div class="myth"><span class="myth-tag">Myth</span><p data-e="my2m">If my child can speak the language, reading and writing will follow.</p></div><div class="truth"><span class="truth-tag">What research says</span><p data-e="my2t">In a study of Korean American families, everyday language habits predicted speaking skills, but keeping reading and writing took active effort from parents. <span class="cite">(Kang, 2015, <i>Bilingual Research Journal</i>)</span></p></div></div>
+        <div class="myth-row"><div class="myth"><span class="myth-tag">Myth</span><p data-e="my3m">Once we choose a plan, we're set.</p></div><div class="truth"><span class="truth-tag">What research says</span><p data-e="my3t">Even a well-defined family language policy can be thrown off by big disruptions and small life changes, so plans need updating over time. <span class="cite">(Pittman &amp; Glimois, 2024)</span></p></div></div>
+        <div class="myth-row"><div class="myth"><span class="myth-tag">Myth</span><p data-e="my4m">If my child loses fluency, it's too late.</p></div><div class="truth"><span class="truth-tag">What research says</span><p data-e="my4t">Heritage speakers are a distinct kind of learner with partial knowledge of the family language, and many work to relearn or improve it later in life. <span class="cite">(Montrul, 2010, <i>Annual Review of Applied Linguistics</i>)</span></p></div></div>
+        <div class="myth-row"><div class="myth"><span class="myth-tag">Myth</span><p data-e="my5m">Any dual language program will serve home-language families well.</p></div><div class="truth"><span class="truth-tag">What research says</span><p data-e="my5t">When two-way immersion spreads without critical attention, it can treat Latino families' languages as a commodity instead of empowering those families. It's worth asking who a program is designed for. <span class="cite">(Cervantes-Soon, 2014, <i>Bilingual Research Journal</i>)</span></p></div></div>
+        <div class="myth-row"><div class="myth"><span class="myth-tag">Myth</span><p data-e="my6m">Keeping a language is just a matter of willpower.</p></div><div class="truth"><span class="truth-tag">What research says</span><p data-e="my6t">A heritage language is tied to the community that speaks it and to identity <span class="cite">(He, 2010)</span>, and keeping it up carries real emotions, including guilt and pressure. <span class="cite">(Song &amp; Wu, 2024, <i>Modern Language Journal</i>)</span></p></div></div>
+      </div>
+      <h3 class="quiz-h" data-e="my9">Test yourself</h3>
+    </div>
+    <div class="quiz" id="quizList"></div>
+    <div class="score"><span>Your score:</span><output id="score" aria-live="polite">0 / 6</output><button class="btn sm ghost" type="button" id="quizReset">Start over</button></div>
+  </div>
+</section>
+
+<section class="part p-school" id="part3">
+  <div class="wrap part-inner">
+    <p class="part-num" data-e="part3-n">Part Four</p>
+    <div>
+      <h2 data-e="part3-t">Weighing schooling options and the transition</h2>
+      <p class="part-desc" data-e="part3-d">You raised your child with more than one language. Here's how to keep all of them going.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SCHOOLS -->
+<section id="schools">
+  <div class="wrap">
+    <div class="read stack">
+      <p class="kicker"><span class="ch">IV</span><span class="chn">Chapter 4</span><span aria-hidden="true">·</span><span data-e="e122" class="ktext">Choosing a school</span></p>
+      <h2 data-e="e40">Bilingual schooling options and the transition point</h2>
+      <p data-e="e41" class="lede">No school does all of the work. Each setting changes how much of the home language your family has to keep up on its own. Start with what's actually available near you.</p>
+    </div>
+
+    <div class="tp">
+      <h3 data-e="tp0">The transition point: what to do and when</h3>
+      <p class="tp-lede" data-e="tp0d">For many families the switch happens around ages 3 to 5, when preschool or kindergarten starts. That's also where bilingual first language acquisition starts to blur into second language acquisition. <span class="cite">(Ortega, 2013, p. 4)</span></p>
+      <ol class="tp-steps">
+        <li><span class="tp-when" data-e="tp1w">Before enrolling</span><p data-e="tp1">Find out which programs near you teach in your home language, and ask each school how long that support lasts. Programs can be cut, so ask how stable they are. <span class="cite">(De Houwer, 2009, pp. 61–62)</span></p></li>
+        <li><span class="tp-when" data-e="tp2w">The first weeks</span><p data-e="tp2">Expect school stories to come home in the school language. Keep your home-language routines, like dinner or bedtime, exactly as they were. <span class="cite">(De Houwer, 2009, p. 63)</span></p></li>
+        <li><span class="tp-when" data-e="tp3w">The first year</span><p data-e="tp3">Check in every few months: Who is your child speaking the home language with? Is anyone still asking them to? Adjust your plan if the answer is "almost no one."</p></li>
+        <li><span class="tp-when" data-e="tp4w">Later on</span><p data-e="tp4">Add reading and writing in the home language, through a weekend class or books at home, so it keeps growing alongside school. <span class="cite">(Ortega, 2013, p. 6)</span></p></li>
+      </ol>
+    </div>
+
+    <div class="panel">
+      <div class="filter">
+        <label id="availLabel">Is your home language taught at a school near you?</label>
+        <div class="chips" role="group" aria-labelledby="availLabel">
+          <button class="chip" type="button" data-avail="yes" aria-pressed="false">Yes</button>
+          <button class="chip" type="button" data-avail="no" aria-pressed="false">No</button>
+          <button class="chip" type="button" data-avail="all" aria-pressed="true">Show all</button>
+        </div>
+      </div>
+      <div class="options" id="options">
+        <article class="opt" data-needs="yes">
+          <span data-e="e123" class="tag">Public or charter</span>
+          <h3 data-e="e42">Two-way dual language</h3>
+          <p data-e="e43">Classes are taught in both languages to a mix of children who speak each one at home. The usual goal is for all of them to become bilingual and biliterate.</p>
+          <div class="load"><span>School</span><span class="meter l3" aria-label="School supports the home language a lot"><i></i><i></i><i></i></span><span>Home</span><span class="meter s1" aria-label="Home carries a light load"><i></i><i></i><i></i></span></div>
+        </article>
+        <article class="opt" data-needs="yes">
+          <span data-e="e124" class="tag">Public</span>
+          <h3 data-e="e44">One-way dual language</h3>
+          <p data-e="e45">The same approach as two-way programs, but nearly all the students share the same home language.</p>
+          <div class="load"><span>School</span><span class="meter l3" aria-label="School supports the home language a lot"><i></i><i></i><i></i></span><span>Home</span><span class="meter s1" aria-label="Home carries a light load"><i></i><i></i><i></i></span></div>
+        </article>
+        <article class="opt" data-needs="yes">
+          <span data-e="e125" class="tag">Public</span>
+          <h3 data-e="e46">Transitional bilingual</h3>
+          <p data-e="e47">Children are taught in the home language for the first few years, then moved into all-English classes. The home language is a bridge to English, not a long-term goal.</p>
+          <div class="load"><span>School</span><span class="meter l2" aria-label="School supports the home language for a while"><i></i><i></i><i></i></span><span>Home</span><span class="meter s2" aria-label="Home carries a medium load"><i></i><i></i><i></i></span></div>
+        </article>
+        <article class="opt" data-needs="yes">
+          <span data-e="e126" class="tag">Private</span>
+          <h3 data-e="e48">Private bilingual or international school</h3>
+          <p data-e="e49">These schools can offer strong instruction in both languages, but they cost money and there may not be one for your language nearby.</p>
+          <div class="load"><span>School</span><span class="meter l3" aria-label="School supports the home language a lot"><i></i><i></i><i></i></span><span>Home</span><span class="meter s1" aria-label="Home carries a light load"><i></i><i></i><i></i></span></div>
+        </article>
+        <article class="opt" data-needs="no">
+          <span data-e="e127" class="tag">Public or private</span>
+          <h3 data-e="e50">English-only, with ESL support</h3>
+          <p data-e="e51">All classes are in English, sometimes with extra English-learning support. This is the most common setting, and the home language gets no time at school.</p>
+          <div class="load"><span>School</span><span class="meter l0" aria-label="School does not support the home language"><i></i><i></i><i></i></span><span>Home</span><span class="meter s3" aria-label="Home carries a heavy load"><i></i><i></i><i></i></span></div>
+        </article>
+        <article class="opt" data-needs="no">
+          <span data-e="e128" class="tag">Outside school</span>
+          <h3 data-e="e52">Weekend or after-school heritage classes</h3>
+          <p data-e="e53">These are community, religious, or cultural programs that teach reading and writing in the home language. They pair well with any school above.</p>
+          <div class="load"><span>School</span><span class="meter l1" aria-label="Classes support the home language a little"><i></i><i></i><i></i></span><span>Home</span><span class="meter s2" aria-label="Home carries a medium load"><i></i><i></i><i></i></span></div>
+        </article>
+      </div>
+      <p data-e="e54" class="example-note" style="margin-top:14px">Bars show roughly how much of the home language each setting supports (raspberry) versus how much the family carries (teal). They're a simple guide, not a measurement.</p>
+    </div>
+
+    <div class="read stack" style="margin-top:28px">
+      <h3 data-e="e55">What the long-term research says</h3>
+      <p data-e="e56">The largest U.S. study of this question followed more than 210,000 student records. Right after leaving language support, children from all-English programs scored higher in English than children from bilingual programs. Over the long run, the pattern flipped: the more years of grade-level schooling a child had in their first language, the higher their English achievement. <span class="cite">(Thomas &amp; Collier, 2002)</span> In the authors' long-term data, dual language programs were the ones that closed the gap with native English speakers, and most other programs did not. <span class="cite">(Collier &amp; Thomas, 2004)</span></p>
+      <p data-e="e57"><b>The catch:</b> school support can disappear. In De Houwer's case study, one boy's Spanish program was cancelled, which left home to do the work. <span class="cite">(De Houwer, 2009, pp. 61–62)</span> So whatever school you choose, have a home plan too.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AT HOME -->
+<section id="home">
+  <div class="wrap">
+    <div class="read stack">
+      <p class="kicker"><span class="ch">V</span><span class="chn">Chapter 5</span><span aria-hidden="true">·</span><span data-e="e129" class="ktext">At home</span></p>
+      <h2 data-e="e59">Six habits that protect the home language</h2>
+      <p data-e="e60" class="lede">Once a child is learning the school language at school, the home language starts working more like a <b>heritage language</b>: one that's mostly used at home and in the community. <span class="cite">(Ortega, 2013, p. 6)</span> These habits come from the families researchers have studied.</p>
+    </div>
+    <div class="habits">
+      <article class="habit"><span class="n" aria-hidden="true">1</span><div><h3 data-e="e61">Give them a real reason to use it</h3><p data-e="e62">One girl understood Korean for years but didn't speak it until a Korean classmate actually needed her help. Children speak a language when someone needs them to. <span class="cite">(De Houwer, 2009, p. 62)</span></p><p data-e="e63" class="try"><b>This week:</b> regular calls with a grandparent who doesn't speak English.</p></div></article>
+      <article class="habit"><span class="n" aria-hidden="true">2</span><div><h3 data-e="e64">Count the hours</h3><p data-e="e65">How much a child hears a language matters. That same girl heard Korean only about five hours a week, while another child heard both languages every day. <span class="cite">(De Houwer, 2009, p. 70)</span></p><p data-e="e66" class="try"><b>This week:</b> write down roughly how many hours a week your child hears the home language.</p></div></article>
+      <article class="habit"><span class="n" aria-hidden="true">3</span><div><h3 data-e="e67">Read together</h3><p data-e="e68">One mother in De Houwer's study read books with her son to make up for how little Korean he heard during the week. <span class="cite">(De Houwer, 2009, p. 71)</span></p><p data-e="e69" class="try"><b>This week:</b> one bedtime book a night in the home language.</p></div></article>
+      <article class="habit"><span class="n" aria-hidden="true">4</span><div><h3 data-e="e70">Decide about reading and writing</h3><p data-e="e71">School teaches reading and writing. At home, a language is picked up through daily life. <span class="cite">(Ortega, 2013, p. 6)</span> Choosing which language to read and write in first is a real family decision. One family had their daughter learn to write in Dutch before Mandarin. <span class="cite">(De Houwer, 2009, p. 59)</span></p><p data-e="e72" class="try"><b>This week:</b> look into a weekend class for reading and writing in the home language.</p></div></article>
+      <article class="habit"><span class="n" aria-hidden="true">5</span><div><h3 data-e="e73">Don't compare them to monolingual kids</h3><p data-e="e74">A bilingual child isn't two monolingual children in one person. Judging them against kids who speak only one language misses what they can actually do. <span class="cite">(Ortega, 2013, pp. 5–6, 9; Cook, 1991)</span></p><p data-e="e75" class="try"><b>This week:</b> notice what your child can do across both languages put together.</p></div></article>
+      <article class="habit"><span class="n" aria-hidden="true">6</span><div><h3 data-e="e76">Expect effort, not a talent</h3><p data-e="e77">You don't need a "language person" for a child to stay bilingual. The hype around gifted language learners hides how much time and effort learning languages takes for everyone. <span class="cite">(Pavlenko, 2015)</span></p><p data-e="e78" class="try"><b>This week:</b> check in on your plan every few months, and change it when it isn't working.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- BAD ADVICE -->
+<section id="advice">
+  <div class="wrap">
+    <div class="read stack">
+      <p class="kicker"><span class="ch">VI</span><span class="chn">Chapter 6</span><span aria-hidden="true">·</span><span data-e="e130" class="ktext">Working with teachers</span></p>
+      <h2 data-e="e80">If a teacher suggests dropping your language</h2>
+      <p data-e="e81" class="lede">In one family De Houwer describes, a school counselor said two languages were harming their son and pushed for special education. <span class="cite">(De Houwer, 2009, p. 60)</span> Advice like this is common, and it doesn't hold up against the research. These points can help you prepare for a parent–teacher meeting.</p>
+    </div>
+    <div class="memo">
+      <p data-e="e82" class="memo-head">Talking points for a parent–teacher meeting</p>
+      <ol>
+        <li data-e="e133"><b>Share the plan.</b> Explain which language is used at home, by whom, and why it matters to your family (for example, it's how your child talks with grandparents).</li>
+        <li data-e="e134"><b>Ask for specifics.</b> Which English skills is your child working on? Concrete goals are easier to support at home than a general worry.</li>
+        <li data-e="e135"><b>Ask about both languages.</b> A bilingual child's full ability shows across both languages, not in one alone. <span class="cite">(Ortega, 2013, pp. 5–6)</span></li>
+        <li data-e="e136"><b>Get a second opinion if needed.</b> If special education or speech services come up, ask for an evaluation by someone experienced with bilingual children.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<!-- SIGNS -->
+<section id="signs">
+  <div class="wrap">
+    <div class="read stack">
+      <p class="kicker"><span class="ch">V</span><span class="chn">Chapter 5</span><span aria-hidden="true">·</span><span data-e="sgk" class="ktext">In your household</span></p>
+      <h2 data-e="sgh">How might this show up in your household?</h2>
+      <p class="lede" data-e="sgl">Language loss rarely announces itself. Check any of these that sound like your home right now. Nothing is saved.</p>
+    </div>
+    <div class="panel sign-panel">
+      <ul class="signs">
+        <li><label class="sign"><input type="checkbox" id="sg1"><span data-e="sg1t">Your child tells you about the school day in English, even when you ask in your language. <span class="cite">(De Houwer, 2009, p. 63)</span></span></label></li>
+        <li><label class="sign"><input type="checkbox" id="sg2"><span data-e="sg2t">You find yourself answering in English to keep the conversation going. <span class="cite">(De Houwer, 2009, p. 63)</span></span></label></li>
+        <li><label class="sign"><input type="checkbox" id="sg3"><span data-e="sg3t">Your child understands everything you say but answers in English. <span class="cite">(Wong Fillmore, 1991)</span></span></label></li>
+        <li><label class="sign"><input type="checkbox" id="sg4"><span data-e="sg4t">The home language goes quiet when English-speaking friends come over. <span class="cite">(Kouritzin, 2000)</span></span></label></li>
+        <li><label class="sign"><input type="checkbox" id="sg5"><span data-e="sg5t">Calls with grandparents are getting shorter, or someone has to translate. <span class="cite">(Wong Fillmore, 1991)</span></span></label></li>
+        <li><label class="sign"><input type="checkbox" id="sg6"><span data-e="sg6t">Your child speaks the home language but isn't learning to read or write it. <span class="cite">(Kang, 2015)</span></span></label></li>
+        <li><label class="sign"><input type="checkbox" id="sg7"><span data-e="sg7t">The home language only comes up for a few topics now, like food or family events. <span class="cite">(Grosjean, 2010)</span></span></label></li>
+        <li><label class="sign"><input type="checkbox" id="sg8"><span data-e="sg8t">Using the home language has started to bring arguments, guilt, or pressure. <span class="cite">(Song &amp; Wu, 2024)</span></span></label></li>
+      </ul>
+      <div class="sign-result" aria-live="polite">
+        <p class="fq-progress">Signs checked: <span id="signCount">0 of 8</span></p>
+        <div class="sign-msg" data-min="0" data-max="2"><h3 data-e="sgr1t">Holding steady</h3><p data-e="sgr1d">Your home language still has real jobs in your child's life. Keep the routines that support it, and check again after big changes like a new school year.</p></div>
+        <div class="sign-msg" data-min="3" data-max="5" hidden=""><h3 data-e="sgr2t">Starting to slip</h3><p data-e="sgr2d">This is the most common pattern once school starts. Pick one or two of the signs you checked and work on those first, using the options in Part Four.</p></div>
+        <div class="sign-msg" data-min="6" data-max="99" hidden=""><h3 data-e="sgr3t">Shifting toward English</h3><p data-e="sgr3d">The school language is taking over. That isn't a failure, and understanding without speaking is something to build on. Start with a real reason to use the language and one weekly routine.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEYOND SCHOOL -->
+<section id="beyond">
+  <div class="wrap">
+    <div class="read stack">
+      <p class="kicker"><span class="ch">VIII</span><span class="chn">Chapter 8</span><span aria-hidden="true">·</span><span data-e="bsk" class="ktext">Outside of school</span></p>
+      <h2 data-e="bsh">Options that aren't school</h2>
+      <p class="lede" data-e="bsl">Whatever school your child attends, these options can carry the home language. Each one fills a gap the research points to.</p>
+    </div>
+    <div class="bs-grid">
+      <article class="bs-card"><h3 data-e="bs1h">Weekend heritage schools</h3><p data-e="bs1d">Community schools, often on Saturdays, that teach reading, writing, and culture in the home language.</p><p class="why" data-e="bs1w"><b>Why it fits the research:</b> Speaking can survive on everyday habits, but reading and writing take active effort <span class="cite">(Kang, 2015)</span>. These schools add the instructed side of learning that home life doesn't usually provide. <span class="cite">(Ortega, 2013, p. 6)</span></p></article>
+      <article class="bs-card"><h3 data-e="bs2h">Cultural centers and community groups</h3><p data-e="bs2d">Embassy cultural centers, places of worship, and community organizations that run classes and events in the language.</p><p class="why" data-e="bs2w"><b>Why it fits the research:</b> A heritage language lives in the community that speaks it <span class="cite">(He, 2010)</span>, and children use a language when the people around them need them to. <span class="cite">(De Houwer, 2009, p. 62)</span></p></article>
+      <article class="bs-card"><h3 data-e="bs3h">Reading and writing at home</h3><p data-e="bs3d">Bedtime books, songs, letters or texts to relatives, and labels around the house in the home language.</p><p class="why" data-e="bs3w"><b>Why it fits the research:</b> Parents in a TABE journal study connected children's literacy to the home environment <span class="cite">(Compean-Garcia, 2013)</span>, and one mother in De Houwer's study used daily reading to make up for low input. <span class="cite">(De Houwer, 2009, p. 71)</span></p></article>
+      <article class="bs-card"><h3 data-e="bs4h">Real reasons to use it</h3><p data-e="bs4d">Regular calls with relatives, trips, playdates with children who speak the language, and summer programs.</p><p class="why" data-e="bs4w"><b>Why it fits the research:</b> Toshie only started speaking Korean when a classmate needed her to <span class="cite">(De Houwer, 2009, p. 62)</span>. Each language survives in the parts of life where it has a job. <span class="cite">(Grosjean, 2010)</span></p></article>
+    </div>
+  </div>
+</section>
+
+<!-- DC EXAMPLES -->
+<section id="dc">
+  <div class="wrap">
+    <div class="read stack">
+      <p class="kicker"><span class="ch">IX</span><span class="chn">Chapter 9</span><span aria-hidden="true">·</span><span data-e="dck" class="ktext">Close to home</span></p>
+      <h2 data-e="dch">Examples in the Washington, D.C. area</h2>
+      <p class="lede" data-e="dcl">Real programs near D.C., grouped by type, with the research that explains why each type can help. Programs change, so check each one's current offerings and application process.</p>
+    </div>
+    <div class="dc-grid">
+      <article class="dc-card"><span class="tag" data-e="dc1g">Public · D.C.</span><h3 data-e="dc1h">DC Public Schools dual language</h3><p data-e="dc1d">Spanish–English dual language programs at schools including Oyster-Adams, Bancroft, Bruce-Monroe, Marie Reed, Powell, Columbia Heights EC, and Roosevelt HS. Oyster-Adams has offered bilingual instruction for more than 50 years.</p><p class="why" data-e="dc1w"><b>Why it fits the research:</b> Over the long run, students with more years of schooling in their first language did better in English, and dual language programs were the ones that closed achievement gaps. <span class="cite">(Thomas &amp; Collier, 2002; Collier &amp; Thomas, 2004)</span></p><a class="dc-link" href="https://dcps.dc.gov/node/1008912">DCPS dual language programs</a></article>
+      <article class="dc-card"><span class="tag" data-e="dc2g">Public charter · D.C.</span><h3 data-e="dc2h">Charter immersion schools</h3><p data-e="dc2d">Mundo Verde, DC Bilingual, and LAMB (Spanish); Washington Yu Ying (Mandarin); Elsie Whitlow Stokes (Spanish and French); and Sela (Hebrew). DC International School continues immersion in Chinese, French, or Spanish for grades 6–12.</p><p class="why" data-e="dc2w"><b>Why it fits the research:</b> A program that continues into middle and high school matters, because support that stops early leaves home to carry the load <span class="cite">(De Houwer, 2009, pp. 61–62)</span>. Parents choosing two-way programs often expect more opportunities and stronger communication skills <span class="cite">(López, 2013)</span>; it's also worth asking who a program is built to serve. <span class="cite">(Cervantes-Soon, 2014)</span></p><a class="dc-link" href="https://www.dcpolicycenter.org/publications/d-c-voices-dual-language/">D.C. Policy Center on dual language demand</a></article>
+      <article class="dc-card"><span class="tag" data-e="dc3g">Public · Northern Virginia</span><h3 data-e="dc3h">Fairfax County dual language immersion</h3><p data-e="dc3d">Half-day immersion in French, German, Japanese, Korean, or Spanish, through a countywide lottery for rising kindergarteners and first graders. Colin Powell Elementary in Centreville runs Virginia's only Korean immersion program.</p><p class="why" data-e="dc3w"><b>Why it fits the research:</b> Starting at age 5 or 6 lands right at the point where bilingual first language acquisition blurs into second language acquisition <span class="cite">(Ortega, 2013, p. 4)</span>. For a Korean-speaking family, it gives the home language a job during the school day and builds the literacy that families struggle to keep up alone. <span class="cite">(Kang, 2015)</span></p><a class="dc-link" href="https://www.fcps.edu/academics/elementary/world-languages-immersion-programs">FCPS dual language immersion</a></article>
+      <article class="dc-card"><span class="tag" data-e="dc4g">Weekend and community · D.C. area</span><h3 data-e="dc4h">Heritage language schools and centers</h3><p data-e="dc4d">Saturday Korean schools such as the United Korean School of Washington; Korean classes through the Korean Cultural Center and the Korean School Institute of DC; Chinese schools such as Wei Hwa Chinese School and the Washington School of Chinese Language and Culture; and the Washington Japanese Language School.</p><p class="why" data-e="dc4w"><b>Why it fits the research:</b> These fill the gap when a family's language isn't offered at school, adding reading and writing and a community that needs the language. <span class="cite">(Kang, 2015; He, 2010)</span></p><a class="dc-link" href="https://washingtondc.korean-culture.org/en/1143/board/914/list">Korean Cultural Center classes</a></article>
+    </div>
+    <p class="example-note" data-e="dcn">Demand is high in D.C.: in 2023–24, the average waitlist for PK3 dual language and immersion programs was 126 students, compared with 35 for other schools. Apply early and have a backup plan. This list is a starting point, not an endorsement.</p>
+  </div>
+</section>
+
+<!-- ABOUT THE AUTHOR -->
+<section id="author">
+  <div class="wrap">
+    <div class="read stack">
+      <p class="kicker" data-e="au0">About the author</p>
+      <h2 data-e="au1">Why I made this guide</h2>
+      <p class="lede" data-e="au2">I'm Hannah Lee, a sophomore in Georgetown University's School of Foreign Service. I grew up keeping Korean alongside English, and I made this site for LING 2050 to share what the research says about families like mine. [Add a sentence or two about yourself.]</p>
+    </div>
+    <div class="au-grid">
+      <article class="au-card"><h3 data-e="au3">Korean immersion in Fairfax County</h3><p data-e="au4">[Write about your Korean immersion program in Fairfax County Public Schools: when you started, what a school day looked like, and how long you stayed in it.]</p></article>
+      <article class="au-card"><h3 data-e="au5">Weekend Korean school</h3><p data-e="au6">[Write about weekend classes: what you studied, who was there, and what they gave you that regular school didn't.]</p></article>
+      <article class="au-card"><h3 data-e="au7">How I kept my Korean</h3><p data-e="au8">[What kept Korean going at home: family rules, relatives, media, church, friends? Was there a time it slipped, and what brought it back?]</p></article>
+      <article class="au-card"><h3 data-e="au9">Where the research shows up in my story</h3><p data-e="au10">[Connect your experience to the ideas on this site. Did you hear Korean from birth (BFLA) or start it at school (SLA)? Which parts of your life ran in Korean and which in English (Complementarity Principle)? What was your family's language policy? Does "heritage language" describe your Korean today?]</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="closing" id="summary">
+  <div class="wrap">
+    <div class="read stack">
+      <p data-e="e86" class="kicker" style="color:inherit;opacity:.7">To sum up</p>
+      <h2 data-e="e87">Growing up multilingual is normal</h2>
+      <p data-e="e88" class="lede">Most people in the world grow up with more than one language. <span class="cite" style="color:inherit">(Ortega, 2013, p. 4; Pavlenko, 2015)</span> Your family doesn't need a perfect method. It needs a plan you come back to, especially when school starts.</p>
+    </div>
+    <div class="three">
+      <div data-e="e137"><b>Know where it lives</b>Figure out which parts of your child's life still use the home language, and protect them.</div>
+      <div data-e="e138"><b>Pick a school with your eyes open</b>Know how much of the home language each option leaves for your family to carry.</div>
+      <div data-e="e139"><b>Make it needed</b>Children keep speaking a language when people they care about need them to.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOURCES -->
+<section id="sources">
+  <div class="wrap">
+    <div class="read stack">
+      <p class="kicker"><span class="ch">VIII</span><span class="chn">Chapter 8</span><span aria-hidden="true">·</span><span data-e="e132" class="ktext">References</span></p>
+      <h2 data-e="e90">Sources</h2>
+      <p data-e="e91" class="lede">Course readings from LING 2050 and outside research, with the parts of the site where each one is used.</p>
+    </div>
+    <div class="ref-table">
+      <table>
+        <thead><tr><th scope="col">Type</th><th scope="col">Reference</th><th scope="col">Used in</th></tr></thead>
+        <tbody>
+        <tr><td data-e="e92"><span class="src course">Course</span></td><td data-e="e93">De Houwer, A. (2009). <i>An introduction to bilingual development</i>. Multilingual Matters. Chs. 5–6.</td><td data-e="e94">Parts 1–3: case studies, the school-transition pattern, myths, input hours, parental work</td></tr>
+        <tr><td data-e="e95"><span class="src course">Course</span></td><td data-e="e96">Ortega, L. (2013). <i>Understanding second language acquisition</i>. Routledge. Ch. 1.</td><td data-e="e97">Parts 1–3: BFLA/SLA boundary, heritage language, monolingual comparisons</td></tr>
+        <tr><td data-e="e98"><span class="src course">Course</span></td><td data-e="e99">Pavlenko, A. (2015). [Add full title from the course reading.]</td><td data-e="e100">Part 2 myths, Part 3 habits, closing: effort over talent, multilingualism as the norm</td></tr>
+        <tr><td data-e="e101"><span class="src outside">Outside</span></td><td data-e="e102">King, K. A., Fogle, L., &amp; Logan-Terry, A. (2008). Family language policy. <i>Language and Linguistics Compass, 2</i>(5), 907–922.</td><td data-e="e103">Part 1: definition of family language policy and the family quiz</td></tr>
+        <tr><td data-e="e104"><span class="src outside">Outside</span></td><td data-e="e105">Wong Fillmore, L. (1991). When learning a second language means losing the first. <i>Early Childhood Research Quarterly, 6</i>(3), 323–346.</td><td data-e="e106">Part 2: home-language loss after school starts</td></tr>
+        <tr><td data-e="e107"><span class="src outside">Outside</span></td><td data-e="e108">Grosjean, F. (2010). <i>Bilingual: Life and reality</i>. Harvard University Press. Also: What a bilingual's languages are used for, <i>Psychology Today</i>, Dec. 2, 2010.</td><td data-e="e109">Parts 1–2: Complementarity Principle and the language map</td></tr>
+        <tr><td data-e="e110"><span class="src outside">Outside</span></td><td data-e="e111">Thomas, W. P., &amp; Collier, V. P. (2002). <i>A national study of school effectiveness for language minority students' long-term academic achievement</i>. CREDE, UC Berkeley.</td><td data-e="e112">Part 3: long-term outcomes by school program</td></tr>
+        <tr><td data-e="e113"><span class="src outside">Outside</span></td><td data-e="e114">Collier, V. P., &amp; Thomas, W. P. (2004). The astounding effectiveness of dual language education for all. <i>NABE Journal of Research and Practice, 2</i>(1), 1–20.</td><td data-e="e115">Part 3: dual language closing the gap</td></tr>
+        <tr><td data-e="s1a"><span class="src outside">Outside</span></td><td data-e="s1b">Kang, H. S. (2015). Korean families in America: Their family language policies and home-language maintenance. <i>Bilingual Research Journal, 38</i>(3), 275–291.</td><td data-e="s1c">Part 3 myths and household signs, Part 4 outside-school options</td></tr>
+        <tr><td data-e="s2a"><span class="src outside">Outside</span></td><td data-e="s2b">Fogle, L. W., &amp; King, K. A. (2013). Child agency and language policy in transnational families. <i>Issues in Applied Linguistics, 19</i>.</td><td data-e="s2c">Part 3 myths</td></tr>
+        <tr><td data-e="s3a"><span class="src outside">Outside</span></td><td data-e="s3b">King, K. A., &amp; Fogle, L. W. (2013). Family language policy and bilingual parenting. <i>Language Teaching, 46</i>(2), 172–194.</td><td data-e="s3c">Part 1 background on family language policy</td></tr>
+        <tr><td data-e="s4a"><span class="src outside">Outside</span></td><td data-e="s4b">Pittman, I., &amp; Glimois, L. (2024). Intentionality and adaptability in family language policy. <i>Sustainable Multilingualism, 24</i>, 23–44.</td><td data-e="s4c">Part 3 myths</td></tr>
+        <tr><td data-e="s5a"><span class="src outside">Outside</span></td><td data-e="s5b">Kouritzin, S. G. (2000). A mother's tongue. <i>TESOL Quarterly, 34</i>(2), 311–.</td><td data-e="s5c">Part 3 household signs</td></tr>
+        <tr><td data-e="s6a"><span class="src outside">Outside</span></td><td data-e="s6b">Montrul, S. (2010). Current issues in heritage language acquisition. <i>Annual Review of Applied Linguistics, 30</i>, 3–23.</td><td data-e="s6c">Part 3 myths</td></tr>
+        <tr><td data-e="s7a"><span class="src outside">Outside</span></td><td data-e="s7b">He, A. W. (2010). The heart of heritage: Sociocultural dimensions of heritage language learning. <i>Annual Review of Applied Linguistics, 30</i>, 66–82.</td><td data-e="s7c">Part 3 myths, Part 4 outside-school options</td></tr>
+        <tr><td data-e="s8a"><span class="src outside">Outside</span></td><td data-e="s8b">Song, J., &amp; Wu, A. E. (2024). Intergenerational autoethnography of heritage language maintenance. <i>Modern Language Journal, 108</i>(1), 14–36.</td><td data-e="s8c">Part 3 myths and household signs</td></tr>
+        <tr><td data-e="s9a"><span class="src outside">Outside</span></td><td data-e="s9b">López, M. M. (2013). Mothers choose: Reasons for enrolling their children in a two-way immersion program. <i>Bilingual Research Journal, 36</i>(2), 208–227.</td><td data-e="s9c">Part 4 D.C. examples</td></tr>
+        <tr><td data-e="s10a"><span class="src outside">Outside</span></td><td data-e="s10b">Cervantes-Soon, C. G. (2014). A critical look at dual language immersion in the new Latin@ diaspora. <i>Bilingual Research Journal, 37</i>(1), 64–82.</td><td data-e="s10c">Part 3 myths, Part 4 D.C. examples</td></tr>
+        <tr><td data-e="s11a"><span class="src outside">Outside</span></td><td data-e="s11b">Compean-Garcia, N. (2013). Parental imprinting: Home-school connections for developing literacy skills in bilingual learners. <i>Journal of Bilingual Education Research &amp; Instruction, 15</i>(1).</td><td data-e="s11c">Part 4 outside-school options</td></tr>
+        <tr><td data-e="s12a"><span class="src local">Local</span></td><td data-e="s12b">DC Public Schools. Dual language programs. dcps.dc.gov.</td><td data-e="s12c">Part 4 D.C. examples</td></tr>
+        <tr><td data-e="s13a"><span class="src local">Local</span></td><td data-e="s13b">D.C. Policy Center. (2024, Dec. 11). D.C. voices: Dual language programs in D.C. schools.</td><td data-e="s13c">Part 4 D.C. examples</td></tr>
+        <tr><td data-e="s14a"><span class="src local">Local</span></td><td data-e="s14b">Fairfax County Public Schools. Dual language immersion programs. fcps.edu.</td><td data-e="s14c">Part 4 D.C. examples</td></tr>
+        <tr><td data-e="s15a"><span class="src local">Local</span></td><td data-e="s15b">George Mason University, College of Humanities and Social Sciences. Student-led study explores perspectives and needs of local dual language immersion programs.</td><td data-e="s15c">Part 4 D.C. examples</td></tr>
+        <tr><td data-e="s16a"><span class="src outside">Outside</span></td><td data-e="s16b">Cantas, N. (2024). Negotiating family language policy: Emotional experiences and playful language input in heritage language learning. <i>Modern Language Journal, 108</i>(S1), 37–55.</td><td data-e="s16c">Part 3 "step in" strategies</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+</main>
+
+<footer>
+  <div class="wrap" data-e="foot">Final project for LING 2050: How Languages Are Learned, Georgetown University, Fall 2026. By Hannah Lee. This site is for general information and doesn't replace advice about your own child from a speech-language pathologist or educator.</div>
+</footer>
+
+<script id="site-edits" type="application/json">{"texts":{"nav1":"Basic Terms","nav2":"Family Quiz","nav3":"Slipping Away","nav4":"Myths","nav5":"Going to School","nav8":"School Options","nav6":"At Home","nav9":"Your Household","nav10":"D.C. Options","nav11":"About the Author","nav7":"Sources","e1":"a guide for parents: raising multilingual kids","e2":"You raised at home them in \u003cspan class=\"home-word\">your language\u003c/span>.&nbsp;\u003cdiv>And now they're starting \u003cspan class=\"school-word\">school\u003c/span>.\u003c/div>","e3":"\u003cdiv>For many families, the transition out of the household and into schooling is when the home language begins to slip. So, what can families do about this?\u003c/div>\u003cdiv>\u003cbr>\u003c/div>\u003cdiv>This guide covers what research says happens at what point, how to consider schooling options, and what habits help children maintain their two (or more) fluencies.\u003c/div>","e140":"Map Your Child's Languages","e141":"Take the Family Quiz","part1-n":"Part One","part1-t":"Basic Linguistic Terms","part1-d":"\u003cdiv>What are the core ideas researchers use to describe multilingual families, and how might they already show up in your home?\u003c/div>","e116":"Before school","e6":"The basics, in plain language","e7":"Researchers have names for things many families already do and use; knowing them makes advice easier to use later on.","e117":"Family language policy","e8":"The spoken and unspoken rules","e9":"\u003cdiv>\u003cspan style=\"font-size: 1.075rem;\">A family language policy is the choices a family makes on which languages are used at home, by whom, and for reading or writing.\u003c/span>\u003c/div>\u003cdiv>\u003cspan class=\"cite\">(King, Fogle &amp; Logan-Terry, 2008)\u003c/span>\u003c/div>","e10":"\u003cdiv>Families can intentionally structure this, like \"Mom only speaks Mandarin.\" Other families may keep it flexible. Both count, and many families may use a mix of both. \u003cspan class=\"cite\">(King &amp; Fogle, 2013, \u003ci>Language Teaching\u003c/i>)\u003c/span>\u003c/div>","e118":"BFLA → SLA","e11":"Timing of acquisition","e12":"Bilingual first language acquisition (BFLA) occurs when a child is raised with two languages from birth. A child who starts a new language past a certain age window, such as in school, is doing \u003cb>second language acquisition\u003c/b> (SLA).\u003cspan style=\"font-size: 1.075rem;\">&nbsp;\u003c/span>\u003cdiv>\u003cspan class=\"cite\">(Ortega, 2013, p. 4)\u003c/span>\u003c/div>","e13":"The line between the types of acquisition blurs around the age of 5, with BFLA occurring before this window and SLA after.","e119":"Complementarity Principle","e14":"Different usage domains","e15":"\u003cdiv>Bilingual and multilingual individuals use their languages for different purposes in different domains of life, with different people. Few individuals will use every language for every purpose.\u003c/div>\u003cspan class=\"cite\">(Grosjean, 2010)\u003c/span>","e16":"A girl who cooks and shops for groceries with a German nanny may think of food items in German. If her schooling is in English, she may associate academics with English; different languages are tied to different domains..","partw-n":"Part Two","partw-t":"Where is your family now?","partw-d":"Before looking ahead to school, take stock of how your family uses its languages today.","fk":"Your family today","fh":"What's your current family language structure?","fl":"\u003cdiv>Family language policies can range from carefully structured to being completely spontaneous.\u003c/div>\u003cdiv>\u003cbr>\u003c/div>\u003cdiv>Complete the quick quiz below to see where your family stands today. There are no wrong answers, and nothing is saved.\u003c/div>","fr0t":"Your result appears here","fr0d":"Answer the questions to see what kind of structure your family may currently have. The result are not evaluative and should be used as a point of reference.","fr1t":"The Planner","fr1d":"\u003cdiv>Your household has a deliberate language policy with set people, times, or rules.&nbsp;\u003c/div>\u003cdiv>\u003cbr>The main risk with this type of structure is when school starts and the school language pushes into the set times in the house; this is covered in Part II.\u003c/div>","fr2t":"Go with the Flow","fr2d":"\u003cdiv>Your household uses both languages naturally and without many rules.&nbsp;\u003c/div>\u003cdiv>\u003cbr>\u003c/div>\u003cdiv>Once school begins, the school language can begin to dominate open opportunities, so it is helpful to establish set times for when the home language is the default.\u003c/div>","fr3t":"The Enabler","fr3d":"\u003cdiv>\u003cdiv>The school language has become the main one at home, which is a common pattern - not a failure!\u003c/div>\u003c/div>\u003cdiv>Part II covers how this may happen, while habits to encourage home language use are in Part III.\u003c/div>","part2-n":"Part Three","part2-t":"How do home languages slip away?","part2-d":"\u003cdiv>What happens to the home language once school starts, and what are the common myths behind it?&nbsp;\u003c/div>","e120":"your child's day-to-day\u003cbr>","e18":"Map where your child's languages live","e19":"\u003cdiv>Different languages are used for different parts of life. This means the home language may only survive where it is needed.\u003c/div>\u003cdiv>Mark which language your child uses for different parts of their day-to-day below to organize their domains of use.\u003c/div>","e20":"Tap \u003cb>Home\u003c/b>, \u003cb>Both\u003c/b>, or \u003cb>School\u003c/b> for each row. Nothing you enter is saved or sent anywhere.","e22":"Rows outlined in teal changed. This drift is the pattern described in \"The first year\" below.","e121":"school: the first year","e24":"How and when does the home language begin to slip?","e25":"\u003cdiv>Research recognizes a common trend in families, and it usually happens gradually and involuntarily\u003cspan style=\"font-size: 1.2rem;\">. \u003c/span>\u003cspan class=\"cite\" style=\"color: rgb(88, 100, 128);\">(De Houwer, 2009, p. 63; Wong Fillmore, 1991)\u003c/span>\u003c/div>","e26":"\u003cdiv>\u003cspan style=\"font-size: 1.35rem; text-wrap-mode: initial;\">School news comes home in the school language\u003c/span>\u003c/div>","e27":"\u003cspan style=\"font-size: 1.075rem;\">Your child goes through learning and their day in English, so they report back to you in English.\u003c/span>","e28":"\u003cb>Step in:&nbsp;\u003c/b>\u003cdiv>\u003cspan style=\"font-size: 14.88px;\">Find opportunities to add your home language in the conversation. Examples include acting like you don't understand so that they're forced to retell the story in the home language, or explicitly asking for the conversation to be in the home language.\u003c/span>\u003c/div>\u003cdiv>\u003cspan style=\"font-size: 14.88px;\">\u003cbr>\u003c/span>\u003c/div>\u003cdiv>\u003cdiv>\u003cspan style=\"font-size: 14.88px;\">In a Czech-English family\u003c/span>\u003cspan style=\"font-size: 14.88px;\">, parents found ways to mix playful bits of their home language into English-dominated conversations, keeping them close while still giving their children Czech input. \u003c/span>\u003cspan class=\"cite\">(Cantas, 2024, \u003ci>Modern Language Journal\u003c/i>)\u003c/span>\u003c/div>\u003c/div>","e29":"Parents stop switching back","e30":"\u003cdiv>Answering in English keeps the conversation going, so parents begin to do this more often.\u003cbr>\u003cdiv>\u003cbr>\u003c/div>\u003c/div>","e31":"\u003cb>Step in:\u003c/b> Keep everyday routines, like dinner or bedtime, in the home language. In a study of Korean American families, everyday language habits at home predicted whether children kept speaking Korean. \u003cspan class=\"cite\">(Kang, 2015, \u003ci>Bilingual Research Journal\u003c/i>)\u003c/span>","e32":"Different person, different language","e33":"\u003cdiv>In what is called a \"dilingual\" conversation, you speak in your language, and your child answers in English. This becomes the norm.\u003c/div>","e34":"\u003cb>Step in:\u003c/b> Create real need for the language: time with people who only speak it, like grandparents or community members. A heritage language lives in the community that uses it, and Toshie started speaking Korean only when a classmate needed her to. \u003cspan class=\"cite\">(He, 2010, \u003ci>Annual Review of Applied Linguistics\u003c/i>; De Houwer, 2009, p. 62)\u003c/span>","e35":"\u003cspan style=\"font-size: 1.35rem; text-wrap-mode: initial;\">Your child understands but can't speak\u003c/span>","e36":"\u003cdiv>As children begin to use more and more English, they can lose their ability to speak in the home language.\u003c/div>","e37":"\u003cb>Step in:\u003c/b> Understanding is a foundation to build on. Many heritage speakers relearn or improve the language later \u003cspan class=\"cite\">(Montrul, 2010, \u003ci>Annual Review of Applied Linguistics\u003c/i>)\u003c/span>, and keeping up reading and writing takes planned effort from parents. \u003cspan class=\"cite\">(Kang, 2015, \u003ci>Bilingual Research Journal\u003c/i>)\u003c/span>","e38":"\u003cb>Why it isn't your fault.\u003c/b> For many families, raising a child bilingually was never really a free choice. It's simply what life looks like. \u003cspan class=\"cite\">(De Houwer, 2009, p. 68)\u003c/span> Parents often get advice with no basis in research and little support, and the guilt and stress that follow are common. \u003cspan class=\"cite\">(Lanza, 2007, cited in De Houwer, 2009, p. 71)\u003c/span> This guide is here to fill that gap.","sgk":"In your household","sgh":"How might this show up in your household?","sgl":"Language loss rarely announces itself. Check any of these that sound like your home right now. Nothing is saved.","sg1t":"Your child tells you about the school day in English, even when you ask in your language. \u003cspan class=\"cite\">(De Houwer, 2009, p. 63)\u003c/span>","sg2t":"You find yourself answering in English to keep the conversation going. \u003cspan class=\"cite\">(De Houwer, 2009, p. 63)\u003c/span>","sg3t":"Your child understands everything you say but answers in English. \u003cspan class=\"cite\">(Wong Fillmore, 1991)\u003c/span>","sg4t":"The home language goes quiet when English-speaking friends come over. \u003cspan class=\"cite\">(Kouritzin, 2000)\u003c/span>","sg5t":"Calls with grandparents are getting shorter, or someone has to translate. \u003cspan class=\"cite\">(Wong Fillmore, 1991)\u003c/span>","sg6t":"Your child speaks the home language but isn't learning to read or write it. \u003cspan class=\"cite\">(Kang, 2015)\u003c/span>","sg7t":"The home language only comes up for a few topics now, like food or family events. \u003cspan class=\"cite\">(Grosjean, 2010)\u003c/span>","sg8t":"Using the home language has started to bring arguments, guilt, or pressure. \u003cspan class=\"cite\">(Song &amp; Wu, 2024)\u003c/span>","sgr1t":"Holding steady","sgr1d":"Your home language still has real jobs in your child's life. Keep the routines that support it, and check again after big changes like a new school year.","sgr2t":"Starting to slip","sgr2d":"This is the most common pattern once school starts. Pick one or two of the signs you checked and work on those first, using the options in Part Four.","sgr3t":"Shifting toward English","sgr3d":"The school language is taking over. That isn't a failure, and understanding without speaking is something to build on. Start with a real reason to use the language and one weekly routine. \u003cspan class=\"cite\">(De Houwer, 2009, p. 62; Kang, 2015)\u003c/span>","e131":"Myths and misconceptions","e84":"Myths and misconceptions","e85":"Many families give up a home language because of advice that sounds reasonable but doesn't hold up. Decide whether each statement is true or false, then see what the research from our course readings says.","my0":"Common myths vs. what research says","my1m":"\"One parent, one language\" is the only method that works.","my1t":"No single family strategy, including One-Parent-One-Language, reliably produces a child who actively speaks both languages. How much a child hears each language, and whether they need it, matter more. \u003cspan class=\"cite\">(Fogle &amp; King, 2013; De Houwer, 2009, p. 70)\u003c/span>","my2m":"If my child can speak the language, reading and writing will follow.","my2t":"In a study of Korean American families, everyday language habits predicted speaking skills, but keeping reading and writing took active effort from parents. \u003cspan class=\"cite\">(Kang, 2015, \u003ci>Bilingual Research Journal\u003c/i>)\u003c/span>","my3m":"Once we choose a plan, we're set.","my3t":"Even a well-defined family language policy can be thrown off by big disruptions and small life changes, so plans need updating over time. Families also renegotiate their plan once children start to prefer the school language. \u003cspan class=\"cite\">(Cantas, 2024, \u003ci>Modern Language Journal\u003c/i>)\u003c/span> \u003cspan class=\"cite\">(Pittman &amp; Glimois, 2024)\u003c/span>","my4m":"If my child loses fluency, it's too late.","my4t":"Heritage speakers are a distinct kind of learner with partial knowledge of the family language, and many work to relearn or improve it later in life. \u003cspan class=\"cite\">(Montrul, 2010, \u003ci>Annual Review of Applied Linguistics\u003c/i>)\u003c/span>","my5m":"Any dual language program will serve home-language families well.","my5t":"When two-way immersion spreads without critical attention, it can treat Latino families' languages as a commodity instead of empowering those families. It's worth asking who a program is designed for. \u003cspan class=\"cite\">(Cervantes-Soon, 2014, \u003ci>Bilingual Research Journal\u003c/i>)\u003c/span>","my6m":"Keeping a language is just a matter of willpower.","my6t":"A heritage language is tied to the community that speaks it and to identity \u003cspan class=\"cite\">(He, 2010)\u003c/span>, and keeping it up carries real emotions, including guilt and pressure. \u003cspan class=\"cite\">(Song &amp; Wu, 2024, \u003ci>Modern Language Journal\u003c/i>)\u003c/span>","my9":"Test yourself","part3-n":"Part Four","part3-t":"Now the little ones are going to school!","part3-d":"You raised your child with more than one language. Here's how to keep all of them going.","e122":"Choosing a school","e40":"Bilingual schooling options and the transition point","e41":"No school does all of the work. Each setting changes how much of the home language your family has to keep up on its own. Start with what's actually available near you.","tp0":"The transition point: what to do and when","tp0d":"For many families the switch happens around ages 3 to 5, when preschool or kindergarten starts. That's also where bilingual first language acquisition starts to blur into second language acquisition. \u003cspan class=\"cite\">(Ortega, 2013, p. 4)\u003c/span>","tp1w":"Before enrolling","tp1":"Find out which programs near you teach in your home language, and ask each school how long that support lasts. Programs can be cut, so ask how stable they are. \u003cspan class=\"cite\">(De Houwer, 2009, pp. 61–62)\u003c/span>","tp2w":"The first weeks","tp2":"Expect school stories to come home in the school language. Keep your home-language routines, like dinner or bedtime, exactly as they were. \u003cspan class=\"cite\">(De Houwer, 2009, p. 63)\u003c/span>","tp3w":"The first year","tp3":"Check in every few months: Who is your child speaking the home language with? Is anyone still asking them to? Adjust your plan if the answer is \"almost no one.\" \u003cspan class=\"cite\">(De Houwer, 2009, p. 63; Kang, 2015)\u003c/span>","tp4w":"Later on","tp4":"Add reading and writing in the home language, through a weekend class or books at home, so it keeps growing alongside school. \u003cspan class=\"cite\">(Ortega, 2013, p. 6)\u003c/span>","e123":"Public or charter","e42":"Two-way dual language","e43":"Classes are taught in both languages to a mix of children who speak each one at home. The usual goal is for all of them to become bilingual and biliterate. Parents often choose these programs for future opportunities and stronger communication skills. \u003cspan class=\"cite\">(López, 2013, \u003ci>Bilingual Research Journal\u003c/i>)\u003c/span>","e124":"Public","e44":"One-way dual language","e45":"The same approach as two-way programs, but nearly all the students share the same home language.","e125":"Public","e46":"Transitional bilingual","e47":"Children are taught in the home language for the first few years, then moved into all-English classes. The home language is a bridge to English, not a long-term goal.","e126":"Private","e48":"Private bilingual or international school","e49":"These schools can offer strong instruction in both languages, but they cost money and there may not be one for your language nearby.","e127":"Public or private","e50":"English-only, with ESL support","e51":"All classes are in English, sometimes with extra English-learning support. This is the most common setting, and the home language gets no time at school.","e128":"Outside school","e52":"Weekend or after-school heritage classes","e53":"These are community, religious, or cultural programs that teach reading and writing in the home language. They pair well with any school above, and they add the reading and writing that home use alone rarely keeps up. \u003cspan class=\"cite\">(Kang, 2015, \u003ci>Bilingual Research Journal\u003c/i>)\u003c/span>","e54":"Bars show roughly how much of the home language each setting supports (raspberry) versus how much the family carries (teal). They're a simple guide, not a measurement.","e55":"What the long-term research says","e56":"The largest U.S. study of this question followed more than 210,000 student records. Right after leaving language support, children from all-English programs scored higher in English than children from bilingual programs. Over the long run, the pattern flipped: the more years of grade-level schooling a child had in their first language, the higher their English achievement. \u003cspan class=\"cite\">(Thomas &amp; Collier, 2002)\u003c/span> In the authors' long-term data, dual language programs were the ones that closed the gap with native English speakers, and most other programs did not. \u003cspan class=\"cite\">(Collier &amp; Thomas, 2004)\u003c/span>","e57":"\u003cb>The catch:\u003c/b> school support can disappear. In De Houwer's case study, one boy's Spanish program was cancelled, which left home to do the work. \u003cspan class=\"cite\">(De Houwer, 2009, pp. 61–62)\u003c/span> So whatever school you choose, have a home plan too.","bsk":"Outside of school","bsh":"Options that aren't school","bsl":"Whatever school your child attends, these options can carry the home language. Each one fills a gap the research points to.","bs1h":"Weekend heritage schools","bs1d":"Community schools, often on Saturdays, that teach reading, writing, and culture in the home language.","bs1w":"\u003cb>Why it fits the research:\u003c/b> Speaking can survive on everyday habits, but reading and writing take active effort \u003cspan class=\"cite\">(Kang, 2015)\u003c/span>. These schools add the instructed side of learning that home life doesn't usually provide. \u003cspan class=\"cite\">(Ortega, 2013, p. 6)\u003c/span>","bs2h":"Cultural centers and community groups","bs2d":"Embassy cultural centers, places of worship, and community organizations that run classes and events in the language.","bs2w":"\u003cb>Why it fits the research:\u003c/b> A heritage language lives in the community that speaks it \u003cspan class=\"cite\">(He, 2010)\u003c/span>, and children use a language when the people around them need them to. \u003cspan class=\"cite\">(De Houwer, 2009, p. 62)\u003c/span>","bs3h":"Reading and writing at home","bs3d":"Bedtime books, songs, letters or texts to relatives, and labels around the house in the home language.","bs3w":"\u003cb>Why it fits the research:\u003c/b> Parents in a TABE journal study connected children's literacy to the home environment \u003cspan class=\"cite\">(Compean-Garcia, 2013)\u003c/span>, and one mother in De Houwer's study used daily reading to make up for low input. \u003cspan class=\"cite\">(De Houwer, 2009, p. 71)\u003c/span>","bs4h":"Real reasons to use it","bs4d":"Regular calls with relatives, trips, playdates with children who speak the language, and summer programs.","bs4w":"\u003cb>Why it fits the research:\u003c/b> Toshie only started speaking Korean when a classmate needed her to \u003cspan class=\"cite\">(De Houwer, 2009, p. 62)\u003c/span>. Each language survives in the parts of life where it has a job. \u003cspan class=\"cite\">(Grosjean, 2010)\u003c/span>","dck":"Close to home","dch":"Examples in the Washington, D.C. area","dcl":"Real programs near D.C., grouped by type, with the research that explains why each type can help. Programs change, so check each one's current offerings and application process.","dc1g":"Public · D.C.","dc1h":"DC Public Schools dual language","dc1d":"Spanish–English dual language programs at schools including Oyster-Adams, Bancroft, Bruce-Monroe, Marie Reed, Powell, Columbia Heights EC, and Roosevelt HS. Oyster-Adams has offered bilingual instruction for more than 50 years.","dc1w":"\u003cb>Why it fits the research:\u003c/b> Over the long run, students with more years of schooling in their first language did better in English, and dual language programs were the ones that closed achievement gaps. \u003cspan class=\"cite\">(Thomas &amp; Collier, 2002; Collier &amp; Thomas, 2004)\u003c/span>","dc2g":"Public charter · D.C.","dc2h":"Charter immersion schools","dc2d":"Mundo Verde, DC Bilingual, and LAMB (Spanish); Washington Yu Ying (Mandarin); Elsie Whitlow Stokes (Spanish and French); and Sela (Hebrew). DC International School continues immersion in Chinese, French, or Spanish for grades 6–12.","dc2w":"\u003cb>Why it fits the research:\u003c/b> A program that continues into middle and high school matters, because support that stops early leaves home to carry the load \u003cspan class=\"cite\">(De Houwer, 2009, pp. 61–62)\u003c/span>. Parents choosing two-way programs often expect more opportunities and stronger communication skills \u003cspan class=\"cite\">(López, 2013)\u003c/span>; it's also worth asking who a program is built to serve. \u003cspan class=\"cite\">(Cervantes-Soon, 2014)\u003c/span>","dc3g":"Public · Northern Virginia","dc3h":"Fairfax County dual language immersion","dc3d":"Half-day immersion in French, German, Japanese, Korean, or Spanish, through a countywide lottery for rising kindergarteners and first graders. Colin Powell Elementary in Centreville runs Virginia's only Korean immersion program.","dc3w":"\u003cb>Why it fits the research:\u003c/b> Starting at age 5 or 6 lands right at the point where bilingual first language acquisition blurs into second language acquisition \u003cspan class=\"cite\">(Ortega, 2013, p. 4)\u003c/span>. For a Korean-speaking family, it gives the home language a job during the school day and builds the literacy that families struggle to keep up alone. \u003cspan class=\"cite\">(Kang, 2015)\u003c/span>","dc4g":"Weekend and community · D.C. area","dc4h":"Heritage language schools and centers","dc4d":"Saturday Korean schools such as the United Korean School of Washington; Korean classes through the Korean Cultural Center and the Korean School Institute of DC; Chinese schools such as Wei Hwa Chinese School and the Washington School of Chinese Language and Culture; and the Washington Japanese Language School.","dc4w":"\u003cb>Why it fits the research:\u003c/b> These fill the gap when a family's language isn't offered at school, adding reading and writing and a community that needs the language. \u003cspan class=\"cite\">(Kang, 2015; He, 2010)\u003c/span>","dcn":"Demand is high in D.C.: in 2023–24, the average waitlist for PK3 dual language and immersion programs was 126 students, compared with 35 for other schools. Apply early and have a backup plan. This list is a starting point, not an endorsement.","e129":"At home","e59":"Six habits that protect the home language","e60":"Once a child is learning the school language at school, the home language starts working more like a \u003cb>heritage language\u003c/b>: one that's mostly used at home and in the community. \u003cspan class=\"cite\">(Ortega, 2013, p. 6)\u003c/span> Heritage speakers often grow up with partial knowledge of the family language, which can still be built on. \u003cspan class=\"cite\">(Montrul, 2010, \u003ci>Annual Review of Applied Linguistics\u003c/i>)\u003c/span> These habits come from the families researchers have studied.","e61":"Give them a real reason to use it","e62":"One girl understood Korean for years but didn't speak it until a Korean classmate actually needed her help. Children speak a language when someone needs them to. \u003cspan class=\"cite\">(De Houwer, 2009, p. 62)\u003c/span>","e63":"\u003cb>This week:\u003c/b> regular calls with a grandparent who doesn't speak English. \u003cspan class=\"cite\">(He, 2010; De Houwer, 2009, p. 62)\u003c/span>","e64":"Count the hours","e65":"How much a child hears a language matters. That same girl heard Korean only about five hours a week, while another child heard both languages every day. \u003cspan class=\"cite\">(De Houwer, 2009, p. 70)\u003c/span>","e66":"\u003cb>This week:\u003c/b> write down roughly how many hours a week your child hears the home language, and from whom. \u003cspan class=\"cite\">(De Houwer, 2009, p. 70; Kang, 2015)\u003c/span>","e67":"Read together","e68":"One mother in De Houwer's study read books with her son to make up for how little Korean he heard during the week. \u003cspan class=\"cite\">(De Houwer, 2009, p. 71)\u003c/span>","e69":"\u003cb>This week:\u003c/b> one bedtime book a night in the home language. \u003cspan class=\"cite\">(Compean-Garcia, 2013, \u003ci>Journal of Bilingual Education Research &amp; Instruction\u003c/i>)\u003c/span>","e70":"Decide about reading and writing","e71":"School teaches reading and writing. At home, a language is picked up through daily life. \u003cspan class=\"cite\">(Ortega, 2013, p. 6)\u003c/span> Choosing which language to read and write in first is a real family decision. One family had their daughter learn to write in Dutch before Mandarin. \u003cspan class=\"cite\">(De Houwer, 2009, p. 59)\u003c/span>","e72":"\u003cb>This week:\u003c/b> look into a weekend class for reading and writing in the home language. \u003cspan class=\"cite\">(Kang, 2015)\u003c/span>","e73":"Don't compare them to monolingual kids","e74":"A bilingual child isn't two monolingual children in one person. Judging them against kids who speak only one language misses what they can actually do. \u003cspan class=\"cite\">(Ortega, 2013, pp. 5–6, 9; Cook, 1991)\u003c/span>","e75":"\u003cb>This week:\u003c/b> notice what your child can do across both languages put together. \u003cspan class=\"cite\">(Ortega, 2013, pp. 5–6)\u003c/span>","e76":"Expect effort, not a talent","e77":"You don't need a \"language person\" for a child to stay bilingual. The hype around gifted language learners hides how much time and effort learning languages takes for everyone. \u003cspan class=\"cite\">(Pavlenko, 2015)\u003c/span>","e78":"\u003cb>This week:\u003c/b> check in on your plan every few months, and change it when it isn't working. \u003cspan class=\"cite\">(Kang, 2015; De Houwer, 2009, p. 71)\u003c/span>","e130":"Working with teachers","e80":"If a teacher suggests dropping your language","e81":"In one family De Houwer describes, a school counselor said two languages were harming their son and pushed for special education. \u003cspan class=\"cite\">(De Houwer, 2009, p. 60)\u003c/span> Advice like this is common, and it doesn't hold up against the research. These points can help you prepare for a parent–teacher meeting.","e82":"Talking points for a parent–teacher meeting","e133":"\u003cb>Share the plan.\u003c/b> Explain which language is used at home, by whom, and why it matters to your family (for example, it's how your child talks with grandparents). \u003cspan class=\"cite\">(King, Fogle &amp; Logan-Terry, 2008)\u003c/span>","e134":"\u003cb>Ask for specifics.\u003c/b> Ask what the school offers in your home language and how long that support lasts, since programs can be cut and leave home to carry the load. \u003cspan class=\"cite\">(De Houwer, 2009, pp. 61–62)\u003c/span>","e135":"\u003cb>Ask about both languages.\u003c/b> A bilingual child's full ability shows across both languages, not in one alone. \u003cspan class=\"cite\">(Ortega, 2013, pp. 5–6)\u003c/span>","e136":"\u003cb>Get a second opinion if needed.\u003c/b> If special education or speech services come up, ask for an evaluation by someone experienced with bilingual children. Advice to drop a language often has no basis in research. \u003cspan class=\"cite\">(De Houwer, 2009, pp. 60, 71)\u003c/span>","au0":"About the author","au1":"Why I made this guide","au2":"I'm Hannah Lee, a sophomore in Georgetown University's School of Foreign Service. I grew up keeping Korean alongside English, and I made this site for LING 2050 to share what the research says about families like mine. [Add a sentence or two about yourself.]","au3":"Korean immersion in Fairfax County","au4":"[Write about your Korean immersion program in Fairfax County Public Schools: when you started, what a school day looked like, and how long you stayed in it.]","au5":"Weekend Korean school","au6":"[Write about weekend classes: what you studied, who was there, and what they gave you that regular school didn't.]","au7":"How I kept my Korean","au8":"[What kept Korean going at home: family rules, relatives, media, church, friends? Was there a time it slipped, and what brought it back?]","au9":"Where the research shows up in my story","au10":"[Connect your experience to the ideas on this site. Did you hear Korean from birth (BFLA) or start it at school (SLA)? Which parts of your life ran in Korean and which in English (Complementarity Principle)? What was your family's language policy? Does \"heritage language\" describe your Korean today?]","e86":"To sum up","e87":"Growing up multilingual is normal","e88":"Most people in the world grow up with more than one language. \u003cspan class=\"cite\" style=\"color:inherit\">(Ortega, 2013, p. 4; Pavlenko, 2015)\u003c/span> Your family doesn't need a perfect method. It needs a plan you come back to, especially when school starts.","e137":"\u003cb>Know where it lives\u003c/b>Figure out which parts of your child's life still use the home language, and protect them.","e138":"\u003cb>Pick a school with your eyes open\u003c/b>Know how much of the home language each option leaves for your family to carry.","e139":"\u003cb>Make it needed\u003c/b>Children keep speaking a language when people they care about need them to.","e132":"References","e90":"Sources","e91":"Course readings from LING 2050 and outside research, with the parts of the site where each one is used.","e92":"\u003cspan class=\"src course\">Course\u003c/span>","e93":"De Houwer, A. (2009). \u003ci>An introduction to bilingual development\u003c/i>. Multilingual Matters. Chs. 5–6.","e94":"Parts 1–3: case studies, the school-transition pattern, myths, input hours, parental work","e95":"\u003cspan class=\"src course\">Course\u003c/span>","e96":"Ortega, L. (2013). \u003ci>Understanding second language acquisition\u003c/i>. Routledge. Ch. 1.","e97":"Parts 1–3: BFLA/SLA boundary, heritage language, monolingual comparisons","e98":"\u003cspan class=\"src course\">Course\u003c/span>","e99":"Pavlenko, A. (2015). [Add full title from the course reading.]","e100":"Part 2 myths, Part 3 habits, closing: effort over talent, multilingualism as the norm","e101":"\u003cspan class=\"src outside\">Outside\u003c/span>","e102":"King, K. A., Fogle, L., &amp; Logan-Terry, A. (2008). Family language policy. \u003ci>Language and Linguistics Compass, 2\u003c/i>(5), 907–922.","e103":"Part 1: definition of family language policy and the family quiz","e104":"\u003cspan class=\"src outside\">Outside\u003c/span>","e105":"Wong Fillmore, L. (1991). When learning a second language means losing the first. \u003ci>Early Childhood Research Quarterly, 6\u003c/i>(3), 323–346.","e106":"Part 2: home-language loss after school starts","e107":"\u003cspan class=\"src outside\">Outside\u003c/span>","e108":"Grosjean, F. (2010). \u003ci>Bilingual: Life and reality\u003c/i>. Harvard University Press. Also: What a bilingual's languages are used for, \u003ci>Psychology Today\u003c/i>, Dec. 2, 2010.","e109":"Parts 1–2: Complementarity Principle and the language map","e110":"\u003cspan class=\"src outside\">Outside\u003c/span>","e111":"Thomas, W. P., &amp; Collier, V. P. (2002). \u003ci>A national study of school effectiveness for language minority students' long-term academic achievement\u003c/i>. CREDE, UC Berkeley.","e112":"Part 3: long-term outcomes by school program","e113":"\u003cspan class=\"src outside\">Outside\u003c/span>","e114":"Collier, V. P., &amp; Thomas, W. P. (2004). The astounding effectiveness of dual language education for all. \u003ci>NABE Journal of Research and Practice, 2\u003c/i>(1), 1–20.","e115":"Part 3: dual language closing the gap","s1a":"\u003cspan class=\"src outside\">Outside\u003c/span>","s1b":"Kang, H. S. (2015). Korean families in America: Their family language policies and home-language maintenance. \u003ci>Bilingual Research Journal, 38\u003c/i>(3), 275–291.","s1c":"Part 3 first-year steps, myths and household signs; Part 4 school options, outside-school options and habits","s2a":"\u003cspan class=\"src outside\">Outside\u003c/span>","s2b":"Fogle, L. W., &amp; King, K. A. (2013). Child agency and language policy in transnational families. \u003ci>Issues in Applied Linguistics, 19\u003c/i>.","s2c":"Part 3 myths","s3a":"\u003cspan class=\"src outside\">Outside\u003c/span>","s3b":"King, K. A., &amp; Fogle, L. W. (2013). Family language policy and bilingual parenting. \u003ci>Language Teaching, 46\u003c/i>(2), 172–194.","s3c":"Part 1 family language policy card","s4a":"\u003cspan class=\"src outside\">Outside\u003c/span>","s4b":"Pittman, I., &amp; Glimois, L. (2024). Intentionality and adaptability in family language policy. \u003ci>Sustainable Multilingualism, 24\u003c/i>, 23–44.","s4c":"Part 3 myths","s5a":"\u003cspan class=\"src outside\">Outside\u003c/span>","s5b":"Kouritzin, S. G. (2000). A mother's tongue. \u003ci>TESOL Quarterly, 34\u003c/i>(2), 311–.","s5c":"Part 3 first-year steps and household signs","s6a":"\u003cspan class=\"src outside\">Outside\u003c/span>","s6b":"Montrul, S. (2010). Current issues in heritage language acquisition. \u003ci>Annual Review of Applied Linguistics, 30\u003c/i>, 3–23.","s6c":"Part 3 first-year steps and myths, Part 4 habits","s7a":"\u003cspan class=\"src outside\">Outside\u003c/span>","s7b":"He, A. W. (2010). The heart of heritage: Sociocultural dimensions of heritage language learning. \u003ci>Annual Review of Applied Linguistics, 30\u003c/i>, 66–82.","s7c":"Part 3 myths, Part 4 outside-school options","s8a":"\u003cspan class=\"src outside\">Outside\u003c/span>","s8b":"Song, J., &amp; Wu, A. E. (2024). Intergenerational autoethnography of heritage language maintenance. \u003ci>Modern Language Journal, 108\u003c/i>(1), 14–36.","s8c":"Part 3 myths and household signs","s9a":"\u003cspan class=\"src outside\">Outside\u003c/span>","s9b":"López, M. M. (2013). Mothers choose: Reasons for enrolling their children in a two-way immersion program. \u003ci>Bilingual Research Journal, 36\u003c/i>(2), 208–227.","s9c":"Part 4 school options and D.C. examples","s10a":"\u003cspan class=\"src outside\">Outside\u003c/span>","s10b":"Cervantes-Soon, C. G. (2014). A critical look at dual language immersion in the new Latin@ diaspora. \u003ci>Bilingual Research Journal, 37\u003c/i>(1), 64–82.","s10c":"Part 3 myths, Part 4 D.C. examples","s11a":"\u003cspan class=\"src outside\">Outside\u003c/span>","s11b":"Compean-Garcia, N. (2013). Parental imprinting: Home-school connections for developing literacy skills in bilingual learners. \u003ci>Journal of Bilingual Education Research &amp; Instruction, 15\u003c/i>(1).","s11c":"Part 4 outside-school options","s12a":"\u003cspan class=\"src local\">Local\u003c/span>","s12b":"DC Public Schools. Dual language programs. dcps.dc.gov.","s12c":"Part 4 D.C. examples","s13a":"\u003cspan class=\"src local\">Local\u003c/span>","s13b":"D.C. Policy Center. (2024, Dec. 11). D.C. voices: Dual language programs in D.C. schools.","s13c":"Part 4 D.C. examples","s14a":"\u003cspan class=\"src local\">Local\u003c/span>","s14b":"Fairfax County Public Schools. Dual language immersion programs. fcps.edu.","s14c":"Part 4 D.C. examples","s15a":"\u003cspan class=\"src local\">Local\u003c/span>","s15b":"George Mason University, College of Humanities and Social Sciences. Student-led study explores perspectives and needs of local dual language immersion programs.","s15c":"Part 4 D.C. examples","s16a":"\u003cspan class=\"src outside\">Outside\u003c/span>","s16b":"Cantas, N. (2024). Negotiating family language policy: Emotional experiences and playful language input in heritage language learning. \u003ci>Modern Language Journal, 108\u003c/i>(S1), 37–55.","s16c":"Part 3 \"step in\" strategies","foot":"Final project for LING 2050: How Languages Are Learned, Georgetown University, Fall 2026, by Hannah Lee.&nbsp;\u003cdiv>This site is for general information and doesn't replace advice about your own child from a speech-language pathologist or educator.\u003c/div>"},"theme":{},"sections":[{"id":"part1","hidden":false},{"id":"basics","hidden":false},{"id":"partw","hidden":false},{"id":"family","hidden":false},{"id":"part2","hidden":false},{"id":"map","hidden":false},{"id":"transition","hidden":false},{"id":"signs","hidden":false},{"id":"quiz","hidden":false},{"id":"part3","hidden":false},{"id":"schools","hidden":false},{"id":"beyond","hidden":false},{"id":"dc","hidden":false},{"id":"home","hidden":true},{"id":"advice","hidden":true},{"id":"author","hidden":true},{"id":"summary","hidden":false},{"id":"sources","hidden":false}],"map":[{"name":"Talking with parents","note":"Getting ready, meals, car rides"},{"name":"Grandparents and other relatives","note":"Visits, holidays, video calls"},{"name":"Brothers and sisters","note":"Playing at home"},{"name":"Bedtime stories","note":"Books, songs"},{"name":"Media","note":"TV, games, videos"},{"name":"Community or religion","note":"Cultural events, places of worship (e.g. church)"},{"name":"Friends","note":"Playdates, the playground"},{"name":"Classroom","note":"Schoolwork, teachers, tutoring"}],"quiz":[{"q":"Speaking two languages at home will confuse my child once school starts.","a":"false","e":"In one family De Houwer describes, a school counselor blamed two languages for a child's struggles and pushed special education. Children do learn to keep their languages apart, and they use each one for different things."},{"q":"If my child answers in English, I should switch to English so we keep talking.","a":"false","e":"Switching sometimes is normal. But when parents stop switching back, conversations where each person speaks a different language can become the family habit, and that's how children lose the ability to speak the home language (De Houwer, 2009, p. 63)."},{"q":"Knowing some words in only one language is a sign something is wrong.","a":"false","e":"That's the Complementarity Principle. Languages divide up the jobs in a child's life, so a child who learned about boots at school may know \"boots\" only in English (De Houwer, 2009, p. 60; Grosjean, 2010)."},{"q":"In the long run, kids who get more years of school in their first language tend to do better in English.","a":"true","e":"Children from all-English programs score higher at first. But in Thomas & Collier's long-term data, more years of first-language schooling went with higher English achievement later on."},{"q":"My bilingual child should be measured against monolingual kids the same age.","a":"false","e":"Ortega (2013) and Cook (1991) argue that bilinguals have a different kind of language knowledge across their languages. Comparing them to monolinguals misses that."},{"q":"Children are more likely to speak a language when someone they care about needs them to.","a":"true","e":"Toshie understood Korean for years but only started speaking it when a Korean classmate needed her (De Houwer, 2009, p. 62)."},{"q":"Some kids just aren't \"language people,\" so there's no point pushing a second language.","a":"false","e":"Pavlenko (2015) argues that hype about gifted polyglots makes people think you need a special talent. Most of the world grows up multilingual (Ortega, 2013, p. 4). What it takes is time and use, not a gift."},{"q":"If we just keep speaking our language at home, our child will pick it up without any extra effort.","a":"false","e":"Hearing a language helps, but how much matters. Toshie heard Korean about five hours a week and didn't speak it for years (De Houwer, 2009, p. 70). Families in De Houwer's study did real \"parental work,\" like daily book reading, to keep it going (p. 71). Reading and writing in particular take active effort from parents (Kang, 2015, Bilingual Research Journal)."}],"family":[{"q":"When and how did your family decide which languages to use at home?","o":{"planned":"We discussed it beforehand and established rules.","flexible":"We never set rules; it happens naturally.","drift":"We planned to use our language, but we mostly use English."}},{"q":"Who speaks the home language with your child?","o":{"planned":"A set person or set times - like one parent or during meals.","flexible":"Whoever is around, whenever it may come up.","drift":"Other family visitors, like grandparents, when they come."}},{"q":"What language does your child usually answer you in?","o":{"planned":"Home language.","flexible":"A mix of both - it depends.","drift":"Mostly or completely in English."}},{"q":"When your child mixes languages, what do you usually do?","o":{"planned":"Encourage them to speak in the home language.","flexible":"Go with it - mixing is fine.","drift":"Keep the conversation going in English."}},{"q":"How does reading and writing happen?","o":{"planned":"We regularly read and write in the home language.","flexible":"We have some books in the language.","drift":"Reading is mostly in English."}}]}</script>
+<script>
+(function () {
+  // Snapshot of the page as published, taken before anything renders. Publishing swaps in new edit data only.
+  // Strip anything the Claude page host injects (runtime scripts, theme attributes) so each publish stays clean.
+  var TEMPLATE = "<!DOCTYPE html>\n" + document.documentElement.outerHTML
+    .replace(/<!-- frame-runtime -->[\s\S]*?<!-- \/frame-runtime -->\s*/g, "")
+    .replace(/<link rel="modulepreload" href="\/_runtime\/[^"]*">\s*/g, "")
+    .replace(/^<html[^>]*>/, '<html lang="en">');
+  var EDITS = {};
+  try { EDITS = JSON.parse(document.getElementById("site-edits").textContent || "{}") || {}; } catch (e) { EDITS = {}; }
+  EDITS.texts = EDITS.texts || {};
+  EDITS.theme = EDITS.theme || {};
+  EDITS.sections = EDITS.sections || null;
+  var editing = false;
+
+  // ---------- defaults ----------
+  var EXAMPLE = [
+    { id: "parents", name: "Talking with parents", note: "Meals, getting ready, car rides", v: "home", drift: "both" },
+    { id: "grand", name: "Grandparents and relatives", note: "Visits and video calls", v: "home", drift: "home" },
+    { id: "sibs", name: "Brothers and sisters", note: "Playing at home", v: "both", drift: "school" },
+    { id: "books", name: "Bedtime stories", note: "Books and songs", v: "home", drift: "both" },
+    { id: "screens", name: "Shows, games, and videos", note: "TV, tablet, YouTube", v: "both", drift: "school" },
+    { id: "community", name: "Community or place of worship", note: "Church, temple, cultural events", v: "home", drift: "home" },
+    { id: "friends", name: "Friends and playground", note: "Playdates and the park", v: "both", drift: "school" },
+    { id: "class", name: "The classroom", note: "Teachers and schoolwork", v: "school", drift: "school" }
+  ];
+  var QUIZ = [
+    { q: "Speaking two languages at home will confuse my child once school starts.", a: "false",
+      e: "In one family De Houwer describes, a school counselor blamed two languages for a child's struggles and pushed special education. Children do learn to keep their languages apart, and they use each one for different things." },
+    { q: "If my child answers in English, I should switch to English so we keep talking.", a: "false",
+      e: "Switching sometimes is normal. But when parents stop switching back, conversations where each person speaks a different language can become the family habit, and that's how children lose the ability to speak the home language (De Houwer, 2009, p. 63)." },
+    { q: "Knowing some words in only one language is a sign something is wrong.", a: "false",
+      e: "That's the Complementarity Principle. Languages divide up the jobs in a child's life, so a child who learned about boots at school may know \"boots\" only in English (De Houwer, 2009, p. 60; Grosjean, 2010)." },
+    { q: "In the long run, kids who get more years of school in their first language tend to do better in English.", a: "true",
+      e: "Children from all-English programs score higher at first. But in Thomas & Collier's long-term data, more years of first-language schooling went with higher English achievement later on." },
+    { q: "My bilingual child should be measured against monolingual kids the same age.", a: "false",
+      e: "Ortega (2013) and Cook (1991) argue that bilinguals have a different kind of language knowledge across their languages. Comparing them to monolinguals misses that." },
+    { q: "Children are more likely to speak a language when someone they care about needs them to.", a: "true",
+      e: "Toshie understood Korean for years but only started speaking it when a Korean classmate needed her (De Houwer, 2009, p. 62)." },
+    { q: "Some kids just aren't \"language people,\" so there's no point pushing a second language.", a: "false",
+      e: "Pavlenko (2015) argues that hype about gifted polyglots makes people think you need a special talent. Most of the world grows up multilingual (Ortega, 2013, p. 4). What it takes is time and use, not a gift." },
+    { q: "If we just keep speaking our language at home, our child will pick it up without any extra effort.", a: "false",
+      e: "Hearing a language helps, but how much matters. Toshie heard Korean about five hours a week and didn't speak it for years (De Houwer, 2009, p. 70). Families in De Houwer's study did real \"parental work,\" like daily book reading, to keep it going (p. 71)." }
+  ];
+  if (Array.isArray(EDITS.map)) EDITS.map.forEach(function (m, i) { if (EXAMPLE[i] && m) { EXAMPLE[i].name = m.name || EXAMPLE[i].name; EXAMPLE[i].note = m.note || EXAMPLE[i].note; } });
+  if (Array.isArray(EDITS.quiz) && EDITS.quiz.length) QUIZ = EDITS.quiz.filter(function (x) { return x && x.q; });
+
+  var FONTS = {
+    classic: { label: "Classic (Garamond + Source Serif)", href: "", display: '"EB Garamond", Garamond, serif', body: '"Source Serif 4", Georgia, serif' },
+    friendly: { label: "Friendly (Fredoka + Nunito)", href: "family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800", display: '"Fredoka", "Nunito", sans-serif', body: '"Nunito", system-ui, sans-serif' },
+    modern: { label: "Modern (DM Serif + DM Sans)", href: "family=DM+Serif+Display&family=DM+Sans:wght@400;500;700", display: '"DM Serif Display", Georgia, serif', body: '"DM Sans", system-ui, sans-serif' },
+    clean: { label: "Clean (Poppins + Lora)", href: "family=Poppins:wght@500;600;700&family=Lora:wght@400;600", display: '"Poppins", system-ui, sans-serif', body: '"Lora", Georgia, serif' },
+    storybook: { label: "Storybook (Baloo 2 + Merriweather)", href: "family=Baloo+2:wght@500;600;700&family=Merriweather:wght@400;700", display: '"Baloo 2", system-ui, sans-serif', body: '"Merriweather", Georgia, serif' }
+  };
+  var COLOR_KEYS = [
+    { k: "home", label: "Home language" },
+    { k: "school", label: "School language" },
+    { k: "sun", label: "Accent 1" },
+    { k: "leaf", label: "Accent 2" },
+    { k: "paper", label: "Background" }
+  ];
+
+  // ---------- apply saved edits ----------
+  function clean(html) {
+    var doc = new DOMParser().parseFromString("<div>" + html + "</div>", "text/html");
+    var root = doc.body.firstChild;
+    root.querySelectorAll("script,style,iframe,object,embed").forEach(function (n) { n.remove(); });
+    root.querySelectorAll("*").forEach(function (n) {
+      Array.prototype.slice.call(n.attributes).forEach(function (a) {
+        if (/^on/i.test(a.name) || (a.name === "href" && /^\s*javascript:/i.test(a.value)) || a.name === "contenteditable") n.removeAttribute(a.name);
+      });
+    });
+    return root.innerHTML;
+  }
+  Object.keys(EDITS.texts).forEach(function (id) {
+    var el = document.querySelector('[data-e="' + id + '"]');
+    if (el) el.innerHTML = clean(EDITS.texts[id]);
+  });
+  function applyTheme() {
+    var r = document.documentElement.style, t = EDITS.theme;
+    if (t.home) { r.setProperty("--home", t.home); r.setProperty("--home-soft", "color-mix(in srgb, " + t.home + " 14%, var(--card))"); }
+    if (t.school) { r.setProperty("--school", t.school); r.setProperty("--school-fill", t.school); r.setProperty("--school-soft", "color-mix(in srgb, " + t.school + " 14%, var(--card))"); }
+    if (t.sun) r.setProperty("--sun", t.sun);
+    if (t.leaf) r.setProperty("--leaf", t.leaf);
+    if (t.paper) r.setProperty("--paper", t.paper);
+    var f = FONTS[t.font];
+    if (f && f.href) {
+      var id = "font-" + t.font;
+      if (!document.getElementById(id)) {
+        var l = document.createElement("link"); l.rel = "stylesheet"; l.id = id;
+        l.href = "https://fonts.googleapis.com/css2?" + f.href + "&display=swap";
+        document.head.appendChild(l);
+      }
+    }
+    if (f) { r.setProperty("--font-display", f.display); r.setProperty("--font-body", f.body); }
+  }
+  applyTheme();
+
+  var SECTION_IDS = ["part1", "basics", "partw", "family", "map", "part2", "transition", "signs", "quiz", "part3", "schools", "beyond", "dc", "home", "advice", "author", "summary", "sources"];
+  function sectionList() {
+    var saved = EDITS.sections || [];
+    var seen = {}, out = [];
+    saved.forEach(function (s) { if (SECTION_IDS.indexOf(s.id) > -1 && !seen[s.id]) { seen[s.id] = 1; out.push({ id: s.id, hidden: !!s.hidden }); } });
+    SECTION_IDS.forEach(function (id, k) {
+      if (seen[id]) return;
+      var pos = 0;
+      for (var j = k - 1; j >= 0; j--) {
+        var at = out.map(function (s) { return s.id; }).indexOf(SECTION_IDS[j]);
+        if (at > -1) { pos = at + 1; break; }
+      }
+      out.splice(pos, 0, { id: id, hidden: false });
+      seen[id] = 1;
+    });
+    return out;
+  }
+  var ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI"];
+  function applySections() {
+    var list = sectionList(), main = document.getElementById("top"), n = 0;
+    list.forEach(function (s) {
+      var sec = document.getElementById(s.id);
+      if (!sec) return;
+      main.appendChild(sec);
+      sec.hidden = s.hidden;
+      var nav = document.querySelector('.nav a[href="#' + s.id + '"]');
+      if (nav) nav.hidden = s.hidden;
+      var ch = sec.querySelector(".kicker .ch"), chn = sec.querySelector(".kicker .chn");
+      if (ch && !s.hidden) { n++; ch.textContent = ROMAN[n - 1] || n; chn.textContent = "Chapter " + n; }
+    });
+  }
+  applySections();
+
+  // ---------- language map ----------
+  var state = EXAMPLE.map(function (d) { return Object.assign({}, d); });
+  var list = document.getElementById("domains");
+  var LABELS = { home: "Home", both: "Both", school: "School" };
+  function render() {
+    list.innerHTML = "";
+    state.forEach(function (d, i) {
+      var li = document.createElement("li");
+      li.className = "domain" + (d.changed ? " changed" : "");
+      var name = document.createElement("div");
+      name.className = "domain-name";
+      name.id = "dn-" + d.id;
+      var nm = document.createElement("span"); nm.className = "dname"; nm.textContent = d.name;
+      var nt = document.createElement("small"); nt.className = "dnote"; nt.textContent = d.note;
+      if (editing) {
+        [nm, nt].forEach(function (el, j) {
+          el.contentEditable = "true"; el.classList.add("editable");
+          el.addEventListener("input", function () { EXAMPLE[i][j ? "note" : "name"] = el.textContent.trim(); state[i][j ? "note" : "name"] = el.textContent.trim(); markDirty(); });
+        });
+      }
+      name.appendChild(nm); name.appendChild(nt);
+      var seg = document.createElement("div");
+      seg.className = "seg";
+      seg.setAttribute("role", "group");
+      seg.setAttribute("aria-labelledby", "dn-" + d.id);
+      ["home", "both", "school"].forEach(function (v) {
+        var b = document.createElement("button");
+        b.type = "button"; b.dataset.v = v; b.id = "seg-" + d.id + "-" + v;
+        b.textContent = LABELS[v];
+        b.setAttribute("aria-pressed", d.v === v ? "true" : "false");
+        b.addEventListener("click", function () { state[i].v = v; state[i].changed = false; render(); });
+        seg.appendChild(b);
+      });
+      li.appendChild(name); li.appendChild(seg);
+      list.appendChild(li);
+    });
+    summarize();
+  }
+  function summarize() {
+    var n = state.length, h = 0, b = 0, s = 0;
+    state.forEach(function (d) { if (d.v === "home") h++; else if (d.v === "both") b++; else s++; });
+    document.getElementById("homeCount").textContent = h + b;
+    document.getElementById("totalCount").textContent = n;
+    document.getElementById("barH").style.width = (h / n * 100) + "%";
+    document.getElementById("barB").style.width = (b / n * 100) + "%";
+    document.getElementById("barS").style.width = (s / n * 100) + "%";
+    var v = document.getElementById("verdict");
+    v.className = "verdict";
+    if (h >= 3) {
+      v.classList.add("good");
+      v.innerHTML = "<b>Strong base.</b> The home language is the only option in " + h + " parts of your child's life. Those are the places where your child actually needs it, so protect them first.";
+    } else if (h + b >= Math.ceil(n / 2)) {
+      v.innerHTML = "<b>Mixed.</b> The home language is still around, but in most places your child could use the school language instead. Pick one or two places where the home language is the only option.";
+    } else {
+      v.classList.add("warn");
+      v.innerHTML = "<b>At risk.</b> The school language now covers most of your child's life. Build at least one regular part of the week where the home language is needed, like calls with relatives or a weekend class.";
+    }
+  }
+  document.getElementById("driftBtn").addEventListener("click", function () {
+    state.forEach(function (d) { if (d.v !== d.drift) { d.v = d.drift; d.changed = true; } });
+    document.getElementById("driftNote").hidden = false;
+    render();
+  });
+  document.getElementById("resetBtn").addEventListener("click", function () {
+    state = EXAMPLE.map(function (d) { return Object.assign({}, d); });
+    document.getElementById("driftNote").hidden = true;
+    render();
+  });
+  render();
+
+  // ---------- school options filter ----------
+  var chips = document.querySelectorAll(".chip");
+  var opts = document.querySelectorAll(".opt");
+  chips.forEach(function (c) {
+    c.addEventListener("click", function () {
+      chips.forEach(function (x) { x.setAttribute("aria-pressed", x === c ? "true" : "false"); });
+      var a = c.dataset.avail;
+      opts.forEach(function (o) {
+        o.classList.remove("dim", "match");
+        if (a === "all") return;
+        if (a === "yes") { o.classList.add("match"); }
+        else if (o.dataset.needs === "no") { o.classList.add("match"); }
+        else { o.classList.add("dim"); }
+      });
+    });
+  });
+
+  // ---------- quiz ----------
+  var quizList = document.getElementById("quizList");
+  var score = 0;
+  function buildQuiz() {
+    quizList.innerHTML = ""; score = 0; updateScore();
+    QUIZ.forEach(function (item, i) {
+      var box = document.createElement("div"); box.className = "q";
+      var top = document.createElement("div"); top.className = "q-top";
+      var txt = document.createElement("p"); txt.className = "q-text"; txt.id = "q" + i;
+      var exp = document.createElement("p"); exp.className = "q-explain";
+      if (editing) {
+        txt.textContent = item.q; txt.contentEditable = "true"; txt.classList.add("editable");
+        txt.addEventListener("input", function () { item.q = txt.textContent.trim(); markDirty(); });
+        var ans = document.createElement("div"); ans.className = "q-btns";
+        var lab = document.createElement("label"); lab.textContent = "Answer: "; lab.htmlFor = "qa" + i;
+        var sel = document.createElement("select"); sel.id = "qa" + i;
+        ["true", "false"].forEach(function (o) { var op = document.createElement("option"); op.value = o; op.textContent = o === "true" ? "True" : "False"; if (item.a === o) op.selected = true; sel.appendChild(op); });
+        sel.addEventListener("change", function () { item.a = sel.value; markDirty(); });
+        var del = document.createElement("button"); del.type = "button"; del.className = "ed-mini"; del.textContent = "Delete";
+        del.addEventListener("click", function () { QUIZ.splice(i, 1); markDirty(); buildQuiz(); });
+        lab.appendChild(sel); ans.appendChild(lab); ans.appendChild(del);
+        top.appendChild(txt); top.appendChild(ans);
+        exp.textContent = item.e; exp.contentEditable = "true"; exp.classList.add("editable");
+        exp.addEventListener("input", function () { item.e = exp.textContent.trim(); markDirty(); });
+        box.appendChild(top); box.appendChild(exp);
+        quizList.appendChild(box);
+        return;
+      }
+      txt.textContent = (i + 1) + ". " + item.q;
+      var btns = document.createElement("div"); btns.className = "q-btns"; btns.setAttribute("role", "group"); btns.setAttribute("aria-labelledby", "q" + i);
+      exp.hidden = true;
+      ["false", "true"].forEach(function (choice) {
+        var b = document.createElement("button"); b.type = "button"; b.id = "q" + i + "-" + choice;
+        b.textContent = choice === "true" ? "True" : "False";
+        b.addEventListener("click", function () {
+          var correct = choice === item.a;
+          if (correct) score++;
+          b.classList.add(correct ? "right" : "wrong");
+          btns.querySelectorAll("button").forEach(function (x) { x.disabled = true; });
+          exp.innerHTML = "<b>" + (correct ? "Correct. " : "Not quite. ") + "It's " + item.a + ".</b> ";
+          exp.appendChild(document.createTextNode(item.e));
+          exp.hidden = false;
+          updateScore();
+        });
+        btns.appendChild(b);
+      });
+      top.appendChild(txt); top.appendChild(btns);
+      box.appendChild(top); box.appendChild(exp);
+      quizList.appendChild(box);
+    });
+    if (editing) {
+      var add = document.createElement("button"); add.type = "button"; add.className = "btn sm ghost"; add.textContent = "Add a question";
+      add.addEventListener("click", function () { QUIZ.push({ q: "New statement", a: "true", e: "Explain the answer here." }); markDirty(); buildQuiz(); });
+      quizList.appendChild(add);
+    }
+  }
+  function updateScore() { document.getElementById("score").textContent = score + " / " + QUIZ.length; }
+  document.getElementById("quizReset").addEventListener("click", buildQuiz);
+  buildQuiz();
+
+  // ---------- family quiz ----------
+  var fqForm = document.getElementById("familyQuiz");
+  var FQ_TYPES = [["planned", "The Planner"], ["flexible", "Go with the Flow"], ["drift", "Drifting"]];
+  var FAMILY = [];
+  if (Array.isArray(EDITS.family) && EDITS.family.length) {
+    EDITS.family.forEach(function (x) {
+      if (!x || typeof x.q !== "string") return;
+      var o = x.o || {};
+      FAMILY.push({ q: x.q, o: { planned: o.planned || "", flexible: o.flexible || "", drift: o.drift || "" } });
+    });
+  } else if (fqForm) {
+    fqForm.querySelectorAll("fieldset.fq").forEach(function (fs) {
+      var lg = fs.querySelector("legend");
+      var item = { q: (lg ? lg.innerHTML : "").replace(/^\s*\d+\.\s*/, ""), o: {} };
+      FQ_TYPES.forEach(function (t) {
+        var inp = fs.querySelector('input[value="' + t[0] + '"]');
+        var sp = inp && inp.parentNode.querySelector("span");
+        item.o[t[0]] = sp ? sp.innerHTML : "";
+      });
+      FAMILY.push(item);
+    });
+  }
+  function scoreFamily() {
+    if (!fqForm) return;
+    var n = FAMILY.length, counts = { planned: 0, flexible: 0, drift: 0 }, answered = 0;
+    for (var i = 0; i < n; i++) {
+      var c = fqForm.querySelector('input[name="fq' + i + '"]:checked');
+      if (c) { answered++; counts[c.value]++; }
+    }
+    document.getElementById("fqProgress").textContent = answered + " of " + n + " answered";
+    if (editing) return;
+    var type = "none";
+    if (n > 0 && answered === n) {
+      type = ["drift", "planned", "flexible"].reduce(function (best, k) { return counts[k] > counts[best] ? k : best; }, "drift");
+    }
+    document.querySelectorAll(".fq-type").forEach(function (d) { d.hidden = d.getAttribute("data-type") !== type; });
+  }
+  function fqButton(label, aria, onClick, disabled) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "ed-mini"; b.textContent = label;
+    if (aria) b.setAttribute("aria-label", aria);
+    b.disabled = !!disabled;
+    b.addEventListener("click", onClick);
+    return b;
+  }
+  function buildFamily() {
+    if (!fqForm) return;
+    fqForm.innerHTML = "";
+    FAMILY.forEach(function (item, i) {
+      var fs = document.createElement("fieldset"); fs.className = "fq";
+      var lg = document.createElement("legend");
+      if (editing) {
+        var num = document.createElement("span"); num.textContent = (i + 1) + ". ";
+        var qt = document.createElement("span"); qt.innerHTML = clean(item.q);
+        qt.contentEditable = "true"; qt.className = "editable";
+        qt.addEventListener("input", function () { item.q = clean(qt.innerHTML); markDirty(); });
+        lg.appendChild(num); lg.appendChild(qt);
+      } else {
+        lg.innerHTML = (i + 1) + ". " + clean(item.q);
+      }
+      fs.appendChild(lg);
+      FQ_TYPES.forEach(function (t) {
+        var lab = document.createElement("label"); lab.className = "fq-opt";
+        var inp = document.createElement("input");
+        inp.type = "radio"; inp.name = "fq" + i; inp.value = t[0]; inp.id = "fq" + i + "-" + t[0];
+        var sp = document.createElement("span"); sp.innerHTML = clean(item.o[t[0]] || "");
+        lab.appendChild(inp); lab.appendChild(sp);
+        if (editing) {
+          inp.disabled = true;
+          sp.contentEditable = "true"; sp.classList.add("editable");
+          sp.addEventListener("input", function () { item.o[t[0]] = clean(sp.innerHTML); markDirty(); });
+          var tag = document.createElement("small"); tag.className = "fq-tag"; tag.textContent = "Counts toward: " + t[1];
+          lab.appendChild(tag);
+        }
+        fs.appendChild(lab);
+      });
+      if (editing) {
+        var tools = document.createElement("div"); tools.className = "fq-tools";
+        tools.appendChild(fqButton("Move up", "Move question " + (i + 1) + " up", function () { FAMILY.splice(i - 1, 0, FAMILY.splice(i, 1)[0]); markDirty(); buildFamily(); }, i === 0));
+        tools.appendChild(fqButton("Move down", "Move question " + (i + 1) + " down", function () { FAMILY.splice(i + 1, 0, FAMILY.splice(i, 1)[0]); markDirty(); buildFamily(); }, i === FAMILY.length - 1));
+        tools.appendChild(fqButton("Delete", "Delete question " + (i + 1), function () { FAMILY.splice(i, 1); markDirty(); buildFamily(); }, false));
+        fs.appendChild(tools);
+      }
+      fqForm.appendChild(fs);
+    });
+    if (editing) {
+      var add = document.createElement("button");
+      add.type = "button"; add.className = "btn sm ghost"; add.textContent = "Add a question";
+      add.addEventListener("click", function () {
+        FAMILY.push({ q: "New question", o: { planned: "Answer for a planned family", flexible: "Answer for a go-with-the-flow family", drift: "Answer for a family drifting toward the school language" } });
+        markDirty(); buildFamily();
+      });
+      fqForm.appendChild(add);
+    }
+    scoreFamily();
+  }
+  if (fqForm) {
+    fqForm.addEventListener("change", scoreFamily);
+    document.getElementById("fqReset").addEventListener("click", function () { fqForm.reset(); scoreFamily(); });
+    buildFamily();
+  }
+
+  // ---------- household signs ----------
+  var signBoxes = document.querySelectorAll(".sign input");
+  function scoreSigns() {
+    var out = document.getElementById("signCount");
+    if (!out) return;
+    var n = 0;
+    signBoxes.forEach(function (c) { if (c.checked) n++; });
+    out.textContent = n + " of " + signBoxes.length;
+    if (editing) return;
+    document.querySelectorAll(".sign-msg").forEach(function (m) {
+      var lo = +m.getAttribute("data-min"), hi = +m.getAttribute("data-max");
+      m.hidden = !(n >= lo && n <= hi);
+    });
+  }
+  signBoxes.forEach(function (c) { c.addEventListener("change", scoreSigns); });
+  scoreSigns();
+
+  // ---------- editor ----------
+  var artifactApi = null, dirty = false, panel = null, statusEl = null;
+  function markDirty() { dirty = true; if (statusEl) statusEl.textContent = "Unpublished changes"; }
+
+  function showEditButton() {
+    var b = document.createElement("button");
+    b.type = "button"; b.id = "editToggle"; b.className = "ed-fab"; b.textContent = "Edit site";
+    b.addEventListener("click", startEditing);
+    document.body.appendChild(b);
+  }
+
+  function startEditing() {
+    if (editing) return;
+    editing = true;
+    document.body.classList.add("is-editing");
+    document.getElementById("editToggle").hidden = true;
+    document.querySelectorAll("[data-e]").forEach(function (el) {
+      el.contentEditable = "true"; el.classList.add("editable");
+      el.addEventListener("input", markDirty);
+    });
+    // links inside editable text shouldn't navigate while editing
+    document.addEventListener("click", blockLinks, true);
+    document.querySelectorAll(".fq-type, .sign-msg").forEach(function (d) { d.hidden = false; });
+    buildPanel(); render(); buildQuiz(); buildFamily();
+  }
+  function blockLinks(e) {
+    if (!editing) return;
+    var a = e.target.closest && e.target.closest("a");
+    if (a && a.closest("[data-e]")) e.preventDefault();
+    var lab = e.target.closest && e.target.closest(".fq-opt, .sign");
+    if (lab && e.target.closest("[data-e]")) e.preventDefault();
+  }
+
+  function el(tag, attrs, text) { var n = document.createElement(tag); if (attrs) Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); }); if (text) n.textContent = text; return n; }
+
+  function buildPanel() {
+    panel = el("aside", { "class": "ed-panel", "aria-label": "Site editor" });
+    var h = el("h2", null, "Edit your site"); panel.appendChild(h);
+    panel.appendChild(el("p", { "class": "ed-help" }, "Click any text on the page to change it. Use Cmd/Ctrl+B for bold and Cmd/Ctrl+I for italics. Changes only go live when you publish."));
+    statusEl = el("p", { "class": "ed-status", "aria-live": "polite" }, "No changes yet"); panel.appendChild(statusEl);
+
+    // colors
+    panel.appendChild(el("h3", null, "Colors"));
+    var cs = getComputedStyle(document.documentElement);
+    COLOR_KEYS.forEach(function (c) {
+      var row = el("div", { "class": "ed-row" });
+      var id = "ed-color-" + c.k;
+      var lab = el("label", { "for": id }, c.label);
+      var inp = el("input", { type: "color", id: id });
+      inp.value = toHex(EDITS.theme[c.k] || cs.getPropertyValue(c.k === "school" ? "--school-fill" : "--" + c.k).trim());
+      inp.addEventListener("input", function () { EDITS.theme[c.k] = inp.value; applyTheme(); markDirty(); });
+      row.appendChild(lab); row.appendChild(inp); panel.appendChild(row);
+    });
+    var resetC = el("button", { type: "button", "class": "ed-mini" }, "Reset colors");
+    resetC.addEventListener("click", function () {
+      COLOR_KEYS.forEach(function (c) { delete EDITS.theme[c.k]; });
+      ["--home", "--home-soft", "--school", "--school-fill", "--school-soft", "--sun", "--leaf", "--paper"].forEach(function (p) { document.documentElement.style.removeProperty(p); });
+      applyTheme(); markDirty(); panel.remove(); buildPanel();
+    });
+    panel.appendChild(resetC);
+
+    // fonts
+    panel.appendChild(el("h3", null, "Fonts"));
+    var fsel = el("select", { id: "ed-font", "aria-label": "Font style" });
+    Object.keys(FONTS).forEach(function (k) { var o = el("option", { value: k }, FONTS[k].label); if ((EDITS.theme.font || "classic") === k) o.selected = true; fsel.appendChild(o); });
+    fsel.addEventListener("change", function () { EDITS.theme.font = fsel.value; applyTheme(); markDirty(); });
+    panel.appendChild(fsel);
+
+    // sections
+    panel.appendChild(el("h3", null, "Chapters"));
+    panel.appendChild(el("p", { "class": "ed-help" }, "Move chapters up or down, or hide ones you don't need. Chapter numbers update on their own."));
+    var ul = el("ul", { "class": "ed-sections" });
+    var secs = sectionList();
+    function drawSecs() {
+      ul.innerHTML = "";
+      secs.forEach(function (s, i) {
+        var sec = document.getElementById(s.id);
+        var title = sec ? (sec.querySelector("h2") || {}).textContent : s.id;
+        var li = el("li");
+        var cbId = "ed-sec-" + s.id;
+        var cb = el("input", { type: "checkbox", id: cbId }); cb.checked = !s.hidden;
+        cb.addEventListener("change", function () { s.hidden = !cb.checked; EDITS.sections = secs; applySections(); markDirty(); });
+        var lab = el("label", { "for": cbId }, title);
+        var up = el("button", { type: "button", "class": "ed-mini", "aria-label": "Move " + title + " up" }, "Up");
+        var dn = el("button", { type: "button", "class": "ed-mini", "aria-label": "Move " + title + " down" }, "Down");
+        up.disabled = i === 0; dn.disabled = i === secs.length - 1;
+        up.addEventListener("click", function () { secs.splice(i - 1, 0, secs.splice(i, 1)[0]); EDITS.sections = secs; applySections(); drawSecs(); markDirty(); });
+        dn.addEventListener("click", function () { secs.splice(i + 1, 0, secs.splice(i, 1)[0]); EDITS.sections = secs; applySections(); drawSecs(); markDirty(); });
+        li.appendChild(cb); li.appendChild(lab); li.appendChild(up); li.appendChild(dn);
+        ul.appendChild(li);
+      });
+    }
+    drawSecs(); panel.appendChild(ul);
+
+    // actions
+    var actions = el("div", { "class": "ed-actions" });
+    var pub = el("button", { type: "button", "class": "btn", id: "ed-publish" }, "Publish");
+    var discard = el("button", { type: "button", "class": "btn ghost", id: "ed-discard" }, "Discard changes");
+    pub.addEventListener("click", publish);
+    discard.addEventListener("click", function () { location.reload(); });
+    actions.appendChild(pub); actions.appendChild(discard);
+    panel.appendChild(actions);
+    document.body.appendChild(panel);
+  }
+
+  function toHex(c) {
+    c = (c || "").trim();
+    if (/^#[0-9a-f]{6}$/i.test(c)) return c;
+    var cv = document.createElement("canvas").getContext("2d"); cv.fillStyle = c || "#000"; return cv.fillStyle.length === 7 ? cv.fillStyle : "#000000";
+  }
+
+  function collect() {
+    var texts = {};
+    document.querySelectorAll("[data-e]").forEach(function (n) {
+      var c = n.cloneNode(true); c.removeAttribute("contenteditable");
+      texts[n.getAttribute("data-e")] = clean(c.innerHTML);
+    });
+    return {
+      texts: texts,
+      theme: EDITS.theme,
+      sections: sectionList(),
+      map: EXAMPLE.map(function (d) { return { name: d.name, note: d.note }; }),
+      quiz: QUIZ.map(function (q) { return { q: q.q, a: q.a, e: q.e }; }),
+      family: FAMILY.map(function (f) { return { q: f.q, o: { planned: f.o.planned, flexible: f.o.flexible, drift: f.o.drift } }; })
+    };
+  }
+
+  function publish() {
+    if (!artifactApi) { statusEl.textContent = "Publishing only works on the published page in Claude."; return; }
+    var json = JSON.stringify(collect()).replace(/</g, "\\u003c");
+    var re = /(<script id="site-edits" type="application\/json">)[\s\S]*?(<\/script>)/;
+    if (!re.test(TEMPLATE)) { statusEl.textContent = "Couldn't save: the page template is missing its edit data."; return; }
+    var html = TEMPLATE.replace(re, function (m, a, b) { return a + json + b; });
+    var btn = document.getElementById("ed-publish"); btn.disabled = true; statusEl.textContent = "Publishing…";
+    artifactApi.publish(html).then(function () {
+      dirty = false; statusEl.textContent = "Published. Reloading…";
+    }).catch(function (err) {
+      btn.disabled = false;
+      var code = (err && (err.code || err.message)) || "";
+      if (/conflict/i.test(code)) statusEl.textContent = "Someone else saved at the same time. The page will reload with their version.";
+      else if (/not_granted|not_writer/i.test(code)) statusEl.textContent = "You don't have permission to publish this page.";
+      else statusEl.textContent = "Couldn't publish (" + code + "). Try again.";
+    });
+  }
+
+  window.addEventListener("beforeunload", function (e) { if (dirty) { e.preventDefault(); e.returnValue = ""; } });
+
+  // Who can edit: the page owner (or editors) on Claude. Local file preview: show the button for testing.
+  if (window.claude && typeof window.claude.use === "function") {
+    Promise.all([window.claude.use("artifact"), window.claude.use("user")]).then(function (r) {
+      artifactApi = r[0];
+      var user = r[1];
+      var canEdit = false;
+      try { canEdit = !!(user && (user.canEdit() || user.isOwner())); } catch (e) { canEdit = false; }
+      if (artifactApi && canEdit) showEditButton();
+    }).catch(function () {});
+  } else if (location.protocol === "file:") {
+    showEditButton();
+  }
+})();
+</script></body></html>
